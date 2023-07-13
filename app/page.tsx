@@ -12,7 +12,7 @@ export default async function Home() {
       <div className='my-5'>
         <h1 className='text-3xl'>Headlines</h1>
       </div>
-      <div className='bg-white p-3 rounded-md grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3'>
+      <div className='bg-white p-3 rounded-md grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5'>
         {newsList.map((news, idx) => (
           <NewsCard key={idx} {...news} />
         ))}
