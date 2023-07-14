@@ -16,7 +16,7 @@ export default function NewsCard({
 
   return (
     <div>
-      <div className='relative aspect-video w-full rounded-md overflow-hidden'>
+      <div className='relative aspect-video w-full rounded-xl overflow-hidden'>
         {image ? (
           <Image
             src={image.thumbnail.contentUrl}
@@ -40,14 +40,18 @@ export default function NewsCard({
             className='object-cover'
           />
         </section>
-        <span>{providerName}</span>
+        <span className='font-light'>{providerName}</span>
       </div>
 
-      <a href={url} target='_blank' className='article-title text-lg'>
+      <a
+        href={url}
+        target='_blank'
+        className='article-title text-lg hover:underline hover:underline-offset-4'
+      >
         {name}
       </a>
 
-      <h6 className='text-sm'>{timeAgo}</h6>
+      <h6 className='text-sm text-neutral-500'>{timeAgo}</h6>
     </div>
   );
 }

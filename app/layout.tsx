@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en' className='bg-neutral-100'>
+    <html lang='en' className='bg-sky-50'>
       <body className={`${figtree.className}`}>
         <Header />
         <div className='max-w-xs sm:max-w-lg md:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto'>
