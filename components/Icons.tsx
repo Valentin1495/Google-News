@@ -23,7 +23,6 @@ export const StarIcon = ({ className }: { className: string }) => (
     strokeWidth='1.5'
     stroke='currentColor'
     className={className}
-    style={{ pointerEvents: 'none' }}
   >
     <path
       strokeLinecap='round'
