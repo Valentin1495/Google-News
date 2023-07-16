@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import SearchBar from './SearchBar';
-import SearchButton from './SearchButton';
+import SearchBtn from './SearchBtn';
 import Navbar from './Navbar';
 
 export default function Header() {
@@ -22,7 +22,7 @@ export default function Header() {
         </div>
         <SearchBar />
         <div className='flex items-center space-x-3'>
-          <SearchButton />
+          <SearchBtn />
           <div className='bg-neutral-100 rounded-full w-12 h-12'></div>
         </div>
       </div>

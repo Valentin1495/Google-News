@@ -23,6 +23,7 @@ export const StarIcon = ({ className }: { className: string }) => (
     strokeWidth='1.5'
     stroke='currentColor'
     className={className}
+    style={{ pointerEvents: 'none' }}
   >
     <path
       strokeLinecap='round'
@@ -63,5 +64,16 @@ export const XMarkIcon = ({ className }: { className: string }) => (
       strokeLinejoin='round'
       d='M6 18L18 6M6 6l12 12'
     />
+  </svg>
+);
+
+export const EllipsisIcon = ({ className }: { className: string }) => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    viewBox='0 0 20 20'
+    fill='currentColor'
+    className={className}
+  >
+    <path d='M10 3a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM10 8.5a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM11.5 15.5a1.5 1.5 0 10-3 0 1.5 1.5 0 003 0z' />
   </svg>
 );

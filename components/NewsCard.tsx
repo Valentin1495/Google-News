@@ -9,7 +9,7 @@ export default function NewsCard({
   datePublished,
 }: News) {
   const { name: providerName, image: providerImage } = provider[0];
-  const providerImgSrc = providerImage.thumbnail.contentUrl;
+  const providerImgSrc = providerImage && providerImage.thumbnail.contentUrl;
   const timeAgo = formatDistanceToNowStrict(new Date(datePublished), {
     addSuffix: true,
   });
@@ -23,6 +23,7 @@ export default function NewsCard({
             alt='article thumbnail'
             fill
             priority
+            sizes='100%'
             className='object-cover'
           />
         ) : (
@@ -31,15 +32,20 @@ export default function NewsCard({
       </div>
 
       <div className='flex items-center space-x-2 my-2'>
-        <section className='relative w-8 h-8 rounded-full overflow-hidden'>
-          <Image
-            src={providerImgSrc}
-            alt='provider pic'
-            fill
-            priority
-            className='object-cover'
-          />
-        </section>
+        {providerImgSrc ? (
+          <section className='relative w-8 h-8 rounded-full overflow-hidden'>
+            <Image
+              src={providerImgSrc}
+              alt='provider pic'
+              fill
+              priority
+              sizes='100%'
+              className='object-cover'
+            />
+          </section>
+        ) : (
+          <div className='bg-neutral-200 rounded-full w-8 h-8'></div>
+        )}
         <span className='font-light'>{providerName}</span>
       </div>
 

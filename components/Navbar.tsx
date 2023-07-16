@@ -1,3 +1,32 @@
+import Dropdown from './Dropdown';
+import NavLink from './NavLink';
+
+export const categories: string[] = [
+  'Home',
+  'World',
+  'Business',
+  'Entertainment',
+  'Politics',
+  'Technology',
+  'Science',
+  'Sports',
+];
+
 export default function Navbar() {
-  return <nav>Navbar</nav>;
+  return (
+    <nav className='mt-4 mb-2 grid grid-cols-4 gap-3 xl:gap-0 xl:flex xl:items-center xl:justify-between w-2/3 mx-auto'>
+      {categories.slice(0, 3).map((category, idx) => (
+        <div key={idx} className='flex justify-center items-center'>
+          <NavLink category={category} />
+        </div>
+      ))}
+      {categories.slice(3, 8).map((category, idx) => (
+        <div key={idx} className='hidden sm:flex justify-center items-center'>
+          <NavLink category={category} />
+        </div>
+      ))}
+
+      <Dropdown />
+    </nav>
+  );
 }
