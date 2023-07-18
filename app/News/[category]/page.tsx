@@ -2,7 +2,7 @@ import FollowBtn from '@/components/FollowBtn';
 import { NewspaperIcon, StarIcon } from '@/components/Icons';
 import NewsCard from '@/components/NewsCard';
 import { getHeadlineNews, getNewsByCategory } from '@/lib/news';
-import { mockNewsData } from '@/mockData';
+import { mockNewsByCategory } from '@/mockData';
 
 type NewsProps = {
   params: { category: string };
@@ -21,7 +21,7 @@ export default async function NewsByCategory({ params }: NewsProps) {
 
   if (category === 'Home') {
     // const headlineNewsData: NewsData = await getHeadlineNews();
-    const headlineNewsData: NewsData = mockNewsData;
+    const headlineNewsData: NewsData = mockNewsByCategory;
     const headlineNewsList = headlineNewsData.value;
 
     return (
@@ -42,7 +42,7 @@ export default async function NewsByCategory({ params }: NewsProps) {
     );
   } else {
     // const newsByCategoryData: NewsData = await getNewsByCategory(category);
-    const newsByCategoryData: NewsData = mockNewsData;
+    const newsByCategoryData: NewsData = mockNewsByCategory;
     const newsByCategoryList = newsByCategoryData.value;
 
     return (

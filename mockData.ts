@@ -1,6 +1,4 @@
-export const mockNewsData: NewsData = {
-  _type: 'News',
-  webSearchUrl: 'https://www.bing.com/news/search?q=top+stories&form=TNSA02',
+export const mockNewsByCategory: NewsData = {
   value: [
     {
       name: 'Ukraine will ‘no doubt’ join NATO when war with Russia ends, US defense secretary tells CNN',
@@ -319,6 +317,281 @@ export const mockNewsData: NewsData = {
         },
       ],
       datePublished: '2023-07-13T04:58:51.0000000Z',
+    },
+  ],
+};
+
+export const mockNewsResults: NewsData = {
+  totalEstimatedMatches: 214000000,
+
+  value: [
+    {
+      name: 'Mark Zuckerberg says tens of millions of people are returning to use Threads every day',
+      url: 'https://www.msn.com/en-us/money/companies/mark-zuckerberg-says-tens-of-millions-of-people-are-returning-to-use-threads-every-day/ar-AA1e1iwA',
+      image: {
+        thumbnail: {
+          contentUrl:
+            'https://www.bing.com/th?id=OVFT.QPTlaGg0BtHR-mLrqPljey&pid=News',
+          width: 700,
+          height: 350,
+        },
+      },
+      description:
+        'The Meta boss said on Threads that early growth for the Twitter rival has been "off the charts," and the focus would now be on user retention.',
+
+      provider: [
+        {
+          _type: 'Organization',
+          name: 'Business Insider on MSN.com',
+          image: {
+            thumbnail: {
+              contentUrl:
+                'https://www.bing.com/th?id=ODF.q-ZVWyz-qFnnPRsNgOLlfQ&pid=news',
+            },
+          },
+        },
+      ],
+      datePublished: '2023-07-18T12:59:19.0000000Z',
+      category: 'ScienceAndTechnology',
+    },
+    {
+      name: 'Head Of Instagram Announces Threads Will Introduce Rate Limits Like Twitter, Elon Musk Responds',
+      url: 'https://brobible.com/culture/article/threads-app-rate-limits-elon-musk-responds/',
+      description:
+        "Twitter saw a mass exodus of users when they began throttling user's ability to view tweets. The introduction of rate limits, tiered to Twitter Blue and",
+
+      provider: [
+        {
+          _type: 'Organization',
+          name: 'BroBible',
+          image: {
+            thumbnail: {
+              contentUrl:
+                'https://www.bing.com/th?id=ODF.oFqg4H-Zlq2mD5Hu0mq8UQ&pid=news',
+            },
+          },
+        },
+      ],
+      datePublished: '2023-07-18T14:28:00.0000000Z',
+      category: 'ScienceAndTechnology',
+    },
+    {
+      name: 'Mark Zuckerberg touts Threads is seeing ‘tens of millions’ people return to the app daily',
+      url: 'https://techcrunch.com/2023/07/18/mark-zuckerberg-touts-threads-is-seeing-tens-of-millions-people-return-to-the-app-daily/',
+      description:
+        'Meta CEO Mark Zuckerberg is putting to rest reports that Instagram’s Twitter rival, Threads, is already seeing usage declines, noting in a new post on Monday that “10s of millions of people come back daily.',
+
+      provider: [
+        {
+          _type: 'Organization',
+          name: 'TheStreet.com on MSN.com',
+          image: {
+            thumbnail: {
+              contentUrl:
+                'https://www.bing.com/th?id=ODF.dsVvdYEiGuqZDGlCaqu-ZQ&pid=news',
+            },
+          },
+        },
+      ],
+      datePublished: '2023-07-18T14:29:33.0000000Z',
+    },
+    {
+      name: 'Threads follows Twitter in limiting number of posts that users can see',
+      url: 'https://www.washingtonpost.com/technology/2023/07/17/threads-limits-twitter/?n=@',
+      image: {
+        thumbnail: {
+          contentUrl:
+            'https://www.bing.com/th?id=OVFT.jn99sJm7Plh5L6dc-dnrby&pid=News',
+          width: 700,
+          height: 466,
+        },
+      },
+      description:
+        'Threads had a wildly successful launch amid a backlash against Twitter over limits on how many posts could be viewed. Now Threads is doing the same thing.',
+
+      provider: [
+        {
+          _type: 'Organization',
+          name: 'The Washington Post',
+          image: {
+            thumbnail: {
+              contentUrl:
+                'https://www.bing.com/th?id=ODF.JRpbjhQKSgfe9BXmFtAAoA&pid=news',
+            },
+          },
+        },
+      ],
+      datePublished: '2023-07-17T21:56:00.0000000Z',
+      category: 'ScienceAndTechnology',
+    },
+    {
+      name: "Threads is taking another page out of Twitter's book",
+      url: 'https://www.msn.com/en-us/news/technology/threads-is-taking-another-page-out-of-twitters-book/ar-AA1e0Qa1',
+      description:
+        'Meta-owned Threads is implementing rate limits to combat bots on the platform just weeks after its rival Twitter imposed similar limits. Instagram CEO Adam Mosseri announced the change via a Threads post yesterday (July 17).',
+
+      provider: [
+        {
+          _type: 'Organization',
+          name: 'Quartz on MSN.com',
+          image: {
+            thumbnail: {
+              contentUrl:
+                'https://www.bing.com/th?id=ODF.o-idNBpSFPJifXI8r9_0Mw&pid=news',
+            },
+          },
+        },
+      ],
+      datePublished: '2023-07-18T10:08:00.0000000Z',
+      category: 'ScienceAndTechnology',
+    },
+    {
+      name: 'Is Threads still considered a rival to Twitter? Expert weighs in',
+      url: 'https://www.msn.com/en-us/money/other/is-threads-still-considered-a-rival-to-twitter-expert-weighs-in/ar-AA1e1jSC',
+      image: {
+        thumbnail: {
+          contentUrl:
+            'https://www.bing.com/th?id=OVFT.dWKNfIwYmbFcx6Vui6BCFS&pid=News',
+          width: 700,
+          height: 393,
+        },
+      },
+      description:
+        'Twitter has undergone a number of changes under Elon Musk’s leadership, including implementing a ‘view-limit’ on how many posts users can read. Musk has taken to Twitter to fire back at critics while taking jabs at his rival. “It has been very clear that Elon Musk is not a fan of Threads,” said Mount.',
+
+      provider: [
+        {
+          _type: 'Organization',
+          name: 'KXAN on MSN.com',
+          image: {
+            thumbnail: {
+              contentUrl:
+                'https://www.bing.com/th?id=ODF.NQMhS3nMSzM3OoefIZqTyg&pid=news',
+            },
+          },
+        },
+      ],
+      datePublished: '2023-07-18T13:10:59.0000000Z',
+      category: 'ScienceAndTechnology',
+    },
+    {
+      name: 'Threads users falling away in large numbers, data suggests',
+      url: 'https://www.msn.com/en-us/money/other/threads-users-falling-away-in-large-numbers-data-suggests/ar-AA1e0qqr',
+      description:
+        'Threads may have had the best start of any app to date in terms of download numbers, but new data suggests the road ahead may be a  rocky one.',
+
+      provider: [
+        {
+          _type: 'Organization',
+          name: 'Digital Trends on MSN.com',
+          image: {
+            thumbnail: {
+              contentUrl:
+                'https://www.bing.com/th?id=ODF.x644vROjZrRe0pKC7YX3XQ&pid=news',
+            },
+          },
+        },
+      ],
+      datePublished: '2023-07-18T06:20:59.0000000Z',
+      category: 'ScienceAndTechnology',
+    },
+    {
+      name: 'Threads users are already spending less time in the app',
+      url: 'https://www.msn.com/en-us/money/other/threads-users-are-already-spending-less-time-in-the-app/ar-AA1dZ6uj',
+      image: {
+        thumbnail: {
+          contentUrl:
+            'https://www.bing.com/th?id=OVFT.iJmDXB5t3816DyExoPLemC&pid=News',
+          width: 700,
+          height: 367,
+        },
+      },
+      description:
+        'Meta’s Threads app is coming back down to Earth after a blockbuster first week that saw the app become the fastest growing of all time..',
+      provider: [
+        {
+          _type: 'Organization',
+          name: 'Engadget on MSN.com',
+          image: {
+            thumbnail: {
+              contentUrl:
+                'https://www.bing.com/th?id=ODF.AVdW8o5VMyi101iqCXZFWA&pid=news',
+            },
+          },
+        },
+      ],
+      datePublished: '2023-07-17T18:39:00.0000000Z',
+      category: 'ScienceAndTechnology',
+    },
+    {
+      name: 'Meta’s Threads Could Make—or Break—the Fediverse',
+      url: 'https://www.wired.com/story/metas-threads-could-make-or-break-the-fediverse/',
+      description:
+        'Meta promised to make Threads compatible with the decentralized protocol underlying Mastodon. Proponents of interoperable social media can’t agree whether to welcome or fear it.',
+
+      provider: [
+        {
+          _type: 'Organization',
+          name: 'Wired',
+          image: {
+            thumbnail: {
+              contentUrl:
+                'https://www.bing.com/th?id=ODF.kotzZAtvSAr_gOrTSz2U3g&pid=news',
+            },
+          },
+        },
+      ],
+      datePublished: '2023-07-18T11:55:00.0000000Z',
+      category: 'ScienceAndTechnology',
+    },
+    {
+      name: "Threads is adding new features, but they're not all good…",
+      url: 'https://www.msn.com/en-us/news/other/threads-is-adding-new-features-but-they-re-not-all-good/ar-AA1e1guv',
+      description:
+        "Meta is currently working on bringing three new features to Threads, and an there's one change that we won't like.",
+
+      provider: [
+        {
+          _type: 'Organization',
+          name: 'Android on MSN.com',
+          image: {
+            thumbnail: {
+              contentUrl:
+                'https://www.bing.com/th?id=ODF.i6AIwq2PJ-_6zQuxkBFWkw&pid=news',
+            },
+          },
+        },
+      ],
+      datePublished: '2023-07-18T13:14:18.0000000Z',
+      category: 'ScienceAndTechnology',
+    },
+    {
+      name: "Twitter CEO Linda Yaccarino takes a second away from the Twitter and Threads rivalry to show she's an Ed Sheeran and Eminem fan",
+      url: 'https://www.msn.com/en-us/entertainment/news/twitter-ceo-linda-yaccarino-takes-a-second-away-from-the-twitter-and-threads-rivalry-to-show-shes-an-ed-sheeran-and-eminem-fan/ar-AA1e0N5H',
+      image: {
+        thumbnail: {
+          contentUrl:
+            'https://www.bing.com/th?id=OVFT.7VFdkyd7cDy81Sb3gP7WSS&pid=News',
+          width: 700,
+          height: 350,
+        },
+      },
+      description:
+        'Twitter\'s new CEO Linda Yaccarino posted a fire emoji below a video that was posted on Twitter showing Ed Sheeran and Eminem singing "Lose Yourself."',
+
+      provider: [
+        {
+          _type: 'Organization',
+          name: 'Business Insider on MSN.com',
+          image: {
+            thumbnail: {
+              contentUrl:
+                'https://www.bing.com/th?id=ODF.q-ZVWyz-qFnnPRsNgOLlfQ&pid=news',
+            },
+          },
+        },
+      ],
+      datePublished: '2023-07-18T10:01:16.0000000Z',
     },
   ],
 };

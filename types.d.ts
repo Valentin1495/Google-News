@@ -1,4 +1,5 @@
 type News = {
+  totalEstimatedMatches?: number;
   name: string;
   url: string;
   image?: {
@@ -7,7 +8,7 @@ type News = {
       width: number;
       height: number;
     };
-    isLicensed: boolean;
+    isLicensed?: boolean;
   };
   description: string;
   provider: [
@@ -21,11 +22,11 @@ type News = {
       };
     }
   ];
+  category?: string;
   datePublished: string;
 };
 
 type NewsData = {
-  _type: string;
-  webSearchUrl: string;
+  totalEstimatedMatches?: number;
   value: News[];
 };

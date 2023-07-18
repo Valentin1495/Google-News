@@ -16,9 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en' className='bg-sky-50'>
-      <body className={`${figtree.className}`}>
-        <div>{children}</div>
-      </body>
+      <body className={`${figtree.className}`}>{children}</body>
     </html>
   );
 }

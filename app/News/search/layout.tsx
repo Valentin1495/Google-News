@@ -1,7 +1,7 @@
 import Header from '@/components/Header';
 import '@/app/globals.css';
 
-export default function NewsFeedLayout({
+export default function NewsSearchLayout({
   children,
 }: {
   children: React.ReactNode;

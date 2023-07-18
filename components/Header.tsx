@@ -2,12 +2,13 @@ import Image from 'next/image';
 import SearchBar from './SearchBar';
 import SearchBtn from './SearchBtn';
 import Navbar from './Navbar';
+import Link from 'next/link';
 
 export default function Header() {
   return (
-    <header className='sticky top-0 bg-white z-10 shadow-md py-2 px-4'>
+    <header className='sticky top-0 bg-white z-10 shadow-md pt-2 px-4'>
       <div className='flex items-center justify-between'>
-        <div className='flex items-center space-x-1.5'>
+        <Link href={'/News/Home'} className='flex items-center space-x-1.5'>
           <div className='relative h-10 w-20'>
             <Image
               src={
@@ -19,7 +20,7 @@ export default function Header() {
             />
           </div>
           <span className='text-xl text-neutral-500 font-medium'>News</span>
-        </div>
+        </Link>
         <SearchBar />
         <div className='flex items-center space-x-3'>
           <SearchBtn />
