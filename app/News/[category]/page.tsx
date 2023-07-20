@@ -1,6 +1,5 @@
-import FollowBtn from '@/components/FollowBtn';
-import { NewspaperIcon, StarIcon } from '@/components/Icons';
-import NewsCard from '@/components/NewsCard';
+import { NewspaperIcon } from '@/components/Icons';
+import NewsArticle from '@/components/NewsArticle';
 import { getHeadlineNews, getNewsByCategory } from '@/lib/news';
 import { mockNewsByCategory } from '@/mockData';
 
@@ -10,16 +9,18 @@ type NewsProps = {
 
 export function generateMetadata({ params }: NewsProps) {
   const category = params.category;
+  const modified = category.charAt(0).toUpperCase() + category.slice(1);
 
   return {
-    title: 'Google News' + ' - ' + category,
+    title: 'Google News' + ' - ' + modified,
   };
 }
 
 export default async function NewsByCategory({ params }: NewsProps) {
   const category = params.category;
+  const modified = category.charAt(0).toUpperCase() + category.slice(1);
 
-  if (category === 'Home') {
+  if (category === 'home') {
     // const headlineNewsData: NewsData = await getHeadlineNews();
     const headlineNewsData: NewsData = mockNewsByCategory;
     const headlineNewsList = headlineNewsData.value;
@@ -31,12 +32,22 @@ export default async function NewsByCategory({ params }: NewsProps) {
             <NewspaperIcon className='w-8 h-8' />
             <h1 className='text-3xl font-medium'>Headlines</h1>
           </div>
-          <FollowBtn />
         </div>
-        <div className='bg-white p-5 rounded-md grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 shadow-md'>
-          {headlineNewsList.map((news, idx) => (
-            <NewsCard key={idx} {...news} />
-          ))}
+
+        <div className='bg-white p-5 rounded-md flex flex-col md:flex-row md:gap-x-4 shadow-md h-full'>
+          <div className='flex flex-col gap-y-4 md:w-1/2'>
+            {headlineNewsList.slice(0, 6).map((news, idx) => (
+              <NewsArticle key={idx} {...news} />
+            ))}
+          </div>
+
+          <div className='bg-neutral-200 h-[1.5px] md:h-auto md:w-[2px] mb-4 md:mb-0'></div>
+
+          <div className='flex flex-col gap-y-4 md:w-1/2'>
+            {headlineNewsList.slice(6, 12).map((news, idx) => (
+              <NewsArticle key={idx} {...news} />
+            ))}
+          </div>
         </div>
       </main>
     );
@@ -50,14 +61,24 @@ export default async function NewsByCategory({ params }: NewsProps) {
         <div className='flex items-center'>
           <div className='flex items-center space-x-2 flex-grow'>
             <NewspaperIcon className='w-8 h-8' />
-            <h1 className='text-3xl font-medium'>{category}</h1>
+            <h1 className='text-3xl font-medium'>{modified}</h1>
           </div>
-          <FollowBtn />
         </div>
-        <div className='bg-white p-5 rounded-md grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 shadow-md'>
-          {newsByCategoryList.map((news, idx) => (
-            <NewsCard key={idx} {...news} />
-          ))}
+
+        <div className='bg-white p-5 rounded-md flex flex-col md:flex-row md:gap-x-4 shadow-md h-full'>
+          <div className='flex flex-col gap-y-4 md:w-1/2'>
+            {newsByCategoryList.slice(0, 6).map((news, idx) => (
+              <NewsArticle key={idx} {...news} />
+            ))}
+          </div>
+
+          <div className='bg-neutral-200 h-[1.5px] md:h-auto md:w-[2px] mb-4 md:mb-0'></div>
+
+          <div className='flex flex-col gap-y-4 md:w-1/2'>
+            {newsByCategoryList.slice(6, 12).map((news, idx) => (
+              <NewsArticle key={idx} {...news} />
+            ))}
+          </div>
         </div>
       </main>
     );

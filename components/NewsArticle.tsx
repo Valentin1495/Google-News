@@ -1,0 +1,52 @@
+import { formatDistanceToNowStrict } from 'date-fns';
+import Image from 'next/image';
+import FollowBtn from './FollowBtn';
+
+export default function NewsArticle({
+  name,
+  url,
+
+  provider,
+  datePublished,
+}: News) {
+  const { name: providerName, image: providerImage } = provider[0];
+  const providerImgSrc = providerImage && providerImage.thumbnail.contentUrl;
+  const timeAgo = formatDistanceToNowStrict(new Date(datePublished), {
+    addSuffix: true,
+  });
+
+  return (
+    <div className='last:border-b-0 border-b-2 border-neutral-200 h-36'>
+      <div className='flex items-center my-2 justify-between'>
+        <div className='flex items-center gap-x-2'>
+          {providerImgSrc ? (
+            <section className='relative w-8 h-8 rounded-full overflow-hidden'>
+              <Image
+                src={providerImgSrc}
+                alt='provider pic'
+                fill
+                priority
+                sizes='100%'
+                className='object-cover'
+              />
+            </section>
+          ) : (
+            <section className='bg-neutral-200 rounded-full w-8 h-8'></section>
+          )}
+          <section className='font-light w-44 truncate'>{providerName}</section>
+        </div>
+        <FollowBtn />
+      </div>
+
+      <a
+        href={url}
+        target='_blank'
+        className='article-title text-lg hover:underline hover:underline-offset-4'
+      >
+        {name}
+      </a>
+
+      <h6 className='text-sm text-neutral-500'>{timeAgo}</h6>
+    </div>
+  );
+}

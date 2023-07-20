@@ -9,7 +9,8 @@ type NavLinkType = {
 
 export default function NavLink({ category }: NavLinkType) {
   const pathname = usePathname();
-  const href = '/News/' + category;
+  const href = '/news/' + category;
+  const modified = category.charAt(0).toUpperCase() + category.slice(1);
 
   const active = pathname === href;
 
@@ -22,7 +23,7 @@ export default function NavLink({ category }: NavLinkType) {
           : 'text-neutral-600 hover:text-black transition-colors'
       } text-sm font-semibold w-fit`}
     >
-      {category}
+      {modified}
     </Link>
   );
 }

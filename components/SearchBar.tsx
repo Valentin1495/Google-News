@@ -11,7 +11,7 @@ export default function SearchBar() {
 
   const search = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    router.push('/News/search?q=' + searchQuery);
+    router.push('/news/search?q=' + searchQuery);
   };
 
   return (

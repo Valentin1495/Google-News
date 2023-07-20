@@ -1,15 +1,6 @@
 type News = {
-  totalEstimatedMatches?: number;
   name: string;
   url: string;
-  image?: {
-    thumbnail: {
-      contentUrl: string;
-      width: number;
-      height: number;
-    };
-    isLicensed?: boolean;
-  };
   description: string;
   provider: [
     {

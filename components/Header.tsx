@@ -6,9 +6,9 @@ import Link from 'next/link';
 
 export default function Header() {
   return (
-    <header className='sticky top-0 bg-white z-10 shadow-md pt-2 px-4'>
+    <header className='sticky top-0 bg-white z-10 shadow-md pt-2 pb-4 sm:pb-0 xl:pb-4 px-4'>
       <div className='flex items-center justify-between'>
-        <Link href={'/News/Home'} className='flex items-center space-x-1.5'>
+        <Link href={'/news/home'} className='flex items-center space-x-1.5'>
           <div className='relative h-10 w-20'>
             <Image
               src={

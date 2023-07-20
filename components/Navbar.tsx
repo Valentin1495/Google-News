@@ -2,14 +2,14 @@ import Dropdown from './Dropdown';
 import NavLink from './NavLink';
 
 export const categories: string[] = [
-  'Home',
-  'World',
-  'Business',
-  'Entertainment',
-  'Politics',
-  'Technology',
-  'Science',
-  'Sports',
+  'home',
+  'world',
+  'business',
+  'entertainment',
+  'politics',
+  'technology',
+  'science',
+  'sports',
 ];
 
 export default function Navbar() {

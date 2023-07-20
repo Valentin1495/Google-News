@@ -3,15 +3,7 @@ export const mockNewsByCategory: NewsData = {
     {
       name: 'Ukraine will ‘no doubt’ join NATO when war with Russia ends, US defense secretary tells CNN',
       url: 'https://www.msn.com/en-us/news/world/ukraine-will-no-doubt-join-nato-when-war-with-russia-ends-us-defense-secretary-tells-cnn/ar-AA1dNXyw',
-      image: {
-        thumbnail: {
-          contentUrl:
-            'https://www.bing.com/th?id=OVFT.iAhu_BAqQxYx00q1lL66DS&pid=News',
-          width: 960,
-          height: 540,
-        },
-        isLicensed: true,
-      },
+
       description:
         'US Secretary of Defense Lloyd Austin told CNN on Thursday he has “no doubt” that Ukraine will become part of NATO after Russia’s war against the country ends. “I have no doubt that will happen, and',
       provider: [
@@ -31,15 +23,7 @@ export const mockNewsByCategory: NewsData = {
     {
       name: 'Hollywood actors poised to strike, joining writers on picket lines',
       url: 'https://www.msn.com/en-us/news/us/hollywood-actors-poised-to-strike-joining-writers-on-picket-lines/ar-AA1dNSWT',
-      image: {
-        thumbnail: {
-          contentUrl:
-            'https://www.bing.com/th?id=OVFT.CHktnObVTvocJYlvlBWjYC&pid=News',
-          width: 800,
-          height: 533,
-        },
-        isLicensed: true,
-      },
+
       description:
         "By Lisa RichwineLOS ANGELES (Reuters) -Negotiators for Hollywood's actors union unanimously recommended a strike after labor talks with studios failed to yield an agreement, setting the stage for",
       provider: [
@@ -59,15 +43,7 @@ export const mockNewsByCategory: NewsData = {
     {
       name: 'House Republicans Criticize F.B.I. in Contentious Hearing',
       url: 'https://www.msn.com/en-us/news/politics/house-republicans-criticize-fbi-in-contentious-hearing/ar-AA1dM5bv',
-      image: {
-        thumbnail: {
-          contentUrl:
-            'https://www.bing.com/th?id=OVFT.HaYFB8eNCGxRud1tycqguy&pid=News',
-          width: 1600,
-          height: 900,
-        },
-        isLicensed: true,
-      },
+
       description:
         'WASHINGTON — Republicans bombarded Christopher A. Wray, the F.B.I. director, on Wednesday with criticisms about his role in investigating former President Donald J. Trump, efforts to address',
       provider: [
@@ -87,15 +63,7 @@ export const mockNewsByCategory: NewsData = {
     {
       name: 'These Are the Most Egregious Exclusions From the 2023 Emmy Nominations',
       url: 'https://www.msn.com/en-us/entertainment/news/these-are-the-most-egregious-exclusions-from-the-2023-emmy-nominations/ar-AA1dMsid',
-      image: {
-        thumbnail: {
-          contentUrl:
-            'https://www.bing.com/th?id=ORMS.3897252160747adec9b01beb86f9eebd&pid=Wdp',
-          width: 2400,
-          height: 1603,
-        },
-        isLicensed: true,
-      },
+
       description:
         'The writers have been striking since May, the actors could join them before the day is out, and the world beyond Hollywood is on fire as always, yet still we find time to fret about the Emmys. It’s',
       provider: [
@@ -115,15 +83,7 @@ export const mockNewsByCategory: NewsData = {
     {
       name: 'Unforgiving heat wave forecast in swaths of U.S. in the coming days',
       url: 'https://www.msn.com/en-us/weather/topstories/unforgiving-heat-wave-forecast-in-swaths-of-us-in-the-coming-days/ar-AA1dM2Eu',
-      image: {
-        thumbnail: {
-          contentUrl:
-            'https://www.bing.com/th?id=OVFT.Uq3mZ34n0UmCM5WEFxAPBy&pid=News',
-          width: 1100,
-          height: 1038,
-        },
-        isLicensed: true,
-      },
+
       description:
         '   An unforgiving heat wave is gripping much of the Lower 48, bringing triple-digit temperatures to the nation’s three most populous states — California, Texas and Florida — and is poised to set a',
       provider: [
@@ -162,15 +122,7 @@ export const mockNewsByCategory: NewsData = {
     {
       name: "Dramatic flooding was rare in Vermont's capital. Expect it more amid climate change.",
       url: 'https://www.msn.com/en-us/weather/topstories/dramatic-flooding-was-rare-in-vermonts-capital-expect-it-more-amid-climate-change/ar-AA1dMMvk',
-      image: {
-        thumbnail: {
-          contentUrl:
-            'https://www.bing.com/th?id=ORMS.14a47165ab79d74b4006ca4f697a7dc4&pid=Wdp',
-          width: 4203,
-          height: 2806,
-        },
-        isLicensed: true,
-      },
+
       description:
         '             Streets in Montpelier, Vermont and surrounding communities morphed into rushing rivers this week, a dramatic display of what could happen more often as climate change fuels heavier',
       provider: [
@@ -190,15 +142,7 @@ export const mockNewsByCategory: NewsData = {
     {
       name: 'Inflation Eased to 3% in June, Slowest Pace in More Than Two Years',
       url: 'https://www.msn.com/en-us/money/markets/inflation-eased-to-3-in-june-slowest-pace-in-more-than-two-years/ar-AA1dKYQj',
-      image: {
-        thumbnail: {
-          contentUrl:
-            'https://www.bing.com/th?id=OVFT.cSvHdchn0OlDb_W2smtXNy&pid=News',
-          width: 553,
-          height: 369,
-        },
-        isLicensed: true,
-      },
+
       description:
         'Inflation cooled last month to its slowest pace in more than two years, giving Americans relief from a painful period of rising prices and boosting the chances that the Federal Reserve will stop',
       provider: [
@@ -218,15 +162,7 @@ export const mockNewsByCategory: NewsData = {
     {
       name: 'Chinese hackers accessed US government emails, Microsoft and US say',
       url: 'https://www.msn.com/en-us/news/us/chinese-hackers-accessed-us-government-emails-microsoft-and-us-say/ar-AA1dMANT',
-      image: {
-        thumbnail: {
-          contentUrl:
-            'https://www.bing.com/th?id=OVFT.pMLXQyVdVww2K_v2pP2I5i&pid=News',
-          width: 800,
-          height: 533,
-        },
-        isLicensed: true,
-      },
+
       description:
         'By Christopher Bing and James PearsonWASHINGTON/LONDON (Reuters) -Chinese state-linked hackers since May have secretly accessed email accounts at around 25 organizations, including U.S. government',
       provider: [
@@ -246,15 +182,7 @@ export const mockNewsByCategory: NewsData = {
     {
       name: "Tornado touches down near Chicago's O'Hare airport, disrupting hundreds of flights",
       url: 'https://www.msn.com/en-us/travel/news/tornado-touches-down-near-chicagos-ohare-airport-disrupting-hundreds-of-flights/ar-AA1dN4wI',
-      image: {
-        thumbnail: {
-          contentUrl:
-            'https://www.bing.com/th?id=OVFT.Eq_dGdLxMf5UMFX5vBPH1y&pid=News',
-          width: 4206,
-          height: 2804,
-        },
-        isLicensed: true,
-      },
+
       description:
         'CHICAGO (AP) — A tornado touched down Wednesday evening near Chicago’s O’Hare International Airport, prompting passengers to take shelter and disrupting hundreds of flights. There were no immediate',
       provider: [
@@ -274,15 +202,7 @@ export const mockNewsByCategory: NewsData = {
     {
       name: 'Iowa legislature passes six-week abortion ban',
       url: 'https://www.msn.com/en-us/news/world/iowa-legislature-passes-six-week-abortion-ban/ar-AA1dLCJk',
-      image: {
-        thumbnail: {
-          contentUrl:
-            'https://www.bing.com/th?id=ORMS.e63cc4dcfe944e28e9ff052f4aabee16&pid=Wdp',
-          width: 976,
-          height: 549,
-        },
-        isLicensed: true,
-      },
+
       description:
         "Iowa's Republican-led legislature has passed a bill banning most abortions after six weeks. Both the state's Senate and House passed the legislation on Tuesday night after Republican Governor Kim",
       provider: [
@@ -328,14 +248,7 @@ export const mockNewsResults: NewsData = {
     {
       name: 'Mark Zuckerberg says tens of millions of people are returning to use Threads every day',
       url: 'https://www.msn.com/en-us/money/companies/mark-zuckerberg-says-tens-of-millions-of-people-are-returning-to-use-threads-every-day/ar-AA1e1iwA',
-      image: {
-        thumbnail: {
-          contentUrl:
-            'https://www.bing.com/th?id=OVFT.QPTlaGg0BtHR-mLrqPljey&pid=News',
-          width: 700,
-          height: 350,
-        },
-      },
+
       description:
         'The Meta boss said on Threads that early growth for the Twitter rival has been "off the charts," and the focus would now be on user retention.',
 
@@ -398,14 +311,7 @@ export const mockNewsResults: NewsData = {
     {
       name: 'Threads follows Twitter in limiting number of posts that users can see',
       url: 'https://www.washingtonpost.com/technology/2023/07/17/threads-limits-twitter/?n=@',
-      image: {
-        thumbnail: {
-          contentUrl:
-            'https://www.bing.com/th?id=OVFT.jn99sJm7Plh5L6dc-dnrby&pid=News',
-          width: 700,
-          height: 466,
-        },
-      },
+
       description:
         'Threads had a wildly successful launch amid a backlash against Twitter over limits on how many posts could be viewed. Now Threads is doing the same thing.',
 
@@ -448,14 +354,7 @@ export const mockNewsResults: NewsData = {
     {
       name: 'Is Threads still considered a rival to Twitter? Expert weighs in',
       url: 'https://www.msn.com/en-us/money/other/is-threads-still-considered-a-rival-to-twitter-expert-weighs-in/ar-AA1e1jSC',
-      image: {
-        thumbnail: {
-          contentUrl:
-            'https://www.bing.com/th?id=OVFT.dWKNfIwYmbFcx6Vui6BCFS&pid=News',
-          width: 700,
-          height: 393,
-        },
-      },
+
       description:
         'Twitter has undergone a number of changes under Elon Musk’s leadership, including implementing a ‘view-limit’ on how many posts users can read. Musk has taken to Twitter to fire back at critics while taking jabs at his rival. “It has been very clear that Elon Musk is not a fan of Threads,” said Mount.',
 
@@ -498,14 +397,7 @@ export const mockNewsResults: NewsData = {
     {
       name: 'Threads users are already spending less time in the app',
       url: 'https://www.msn.com/en-us/money/other/threads-users-are-already-spending-less-time-in-the-app/ar-AA1dZ6uj',
-      image: {
-        thumbnail: {
-          contentUrl:
-            'https://www.bing.com/th?id=OVFT.iJmDXB5t3816DyExoPLemC&pid=News',
-          width: 700,
-          height: 367,
-        },
-      },
+
       description:
         'Meta’s Threads app is coming back down to Earth after a blockbuster first week that saw the app become the fastest growing of all time..',
       provider: [
@@ -568,14 +460,7 @@ export const mockNewsResults: NewsData = {
     {
       name: "Twitter CEO Linda Yaccarino takes a second away from the Twitter and Threads rivalry to show she's an Ed Sheeran and Eminem fan",
       url: 'https://www.msn.com/en-us/entertainment/news/twitter-ceo-linda-yaccarino-takes-a-second-away-from-the-twitter-and-threads-rivalry-to-show-shes-an-ed-sheeran-and-eminem-fan/ar-AA1e0N5H',
-      image: {
-        thumbnail: {
-          contentUrl:
-            'https://www.bing.com/th?id=OVFT.7VFdkyd7cDy81Sb3gP7WSS&pid=News',
-          width: 700,
-          height: 350,
-        },
-      },
+
       description:
         'Twitter\'s new CEO Linda Yaccarino posted a fire emoji below a video that was posted on Twitter showing Ed Sheeran and Eminem singing "Lose Yourself."',
 
