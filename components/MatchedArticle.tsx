@@ -2,7 +2,7 @@ import { formatDistanceToNowStrict } from 'date-fns';
 import Image from 'next/image';
 import FollowBtn from './FollowBtn';
 
-export default function NewsArticle({
+export default function MatchedArticle({
   name,
   url,
   provider,
@@ -15,7 +15,7 @@ export default function NewsArticle({
   });
 
   return (
-    <div className='last:border-b-0 border-b-2 border-neutral-200 h-36'>
+    <div className='bg-white flex flex-col justify-between p-4 rounded-md shadow-sm'>
       <div className='flex items-center my-2 justify-between'>
         <div className='flex items-center gap-x-2'>
           {providerImgSrc ? (
@@ -32,7 +32,7 @@ export default function NewsArticle({
           ) : (
             <section className='bg-neutral-200 rounded-full w-8 h-8'></section>
           )}
-          <section className='font-light w-44 truncate'>{providerName}</section>
+          <section className='font-light w-36 truncate'>{providerName}</section>
         </div>
         <FollowBtn />
       </div>

@@ -21,17 +21,15 @@ export default async function NewsByCategory({ params }: NewsProps) {
   const modified = category.charAt(0).toUpperCase() + category.slice(1);
 
   if (category === 'home') {
-    // const headlineNewsData: NewsData = await getHeadlineNews();
+    // const headlineNewsData = await getHeadlineNews();
     const headlineNewsData: NewsData = mockNewsByCategory;
     const headlineNewsList = headlineNewsData.value;
 
     return (
       <main className='py-10 space-y-5'>
-        <div className='flex items-center'>
-          <div className='flex items-center space-x-2 flex-grow'>
-            <NewspaperIcon className='w-8 h-8' />
-            <h1 className='text-3xl font-medium'>Headlines</h1>
-          </div>
+        <div className='flex items-center gap-x-2 '>
+          <NewspaperIcon className='w-8 h-8' />
+          <h1 className='text-3xl font-medium'>Headlines</h1>
         </div>
 
         <div className='bg-white p-5 rounded-md flex flex-col md:flex-row md:gap-x-4 shadow-md h-full'>
@@ -52,17 +50,15 @@ export default async function NewsByCategory({ params }: NewsProps) {
       </main>
     );
   } else {
-    // const newsByCategoryData: NewsData = await getNewsByCategory(category);
+    // const newsByCategoryData = await getNewsByCategory(category);
     const newsByCategoryData: NewsData = mockNewsByCategory;
     const newsByCategoryList = newsByCategoryData.value;
 
     return (
       <main className='py-10 space-y-5'>
-        <div className='flex items-center'>
-          <div className='flex items-center space-x-2 flex-grow'>
-            <NewspaperIcon className='w-8 h-8' />
-            <h1 className='text-3xl font-medium'>{modified}</h1>
-          </div>
+        <div className='flex items-center gap-x-2'>
+          <NewspaperIcon className='w-8 h-8' />
+          <h1 className='text-3xl font-medium'>{modified}</h1>
         </div>
 
         <div className='bg-white p-5 rounded-md flex flex-col md:flex-row md:gap-x-4 shadow-md h-full'>

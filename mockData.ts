@@ -242,7 +242,7 @@ export const mockNewsByCategory: NewsData = {
 };
 
 export const mockNewsResults: NewsData = {
-  totalEstimatedMatches: 214000000,
+  totalEstimatedMatches: 214000000000,
 
   value: [
     {

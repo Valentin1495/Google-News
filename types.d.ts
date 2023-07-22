@@ -21,3 +21,7 @@ type NewsData = {
   totalEstimatedMatches?: number;
   value: News[];
 };
+
+type SearchParams = {
+  q: string;
+};

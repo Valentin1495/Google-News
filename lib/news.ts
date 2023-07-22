@@ -1,23 +1,10 @@
-export async function getHeadlineNews() {
-  const res = await fetch(`${process.env.BING_API_URL}/news?mkt=en-us`, {
-    headers: {
-      'Ocp-Apim-Subscription-Key': process.env.SUBSCRIPTION_KEY as string,
-    },
-  });
-
-  if (!res.ok) {
-    throw new Error('error');
-  }
-
-  return res.json();
-}
-
-export async function getNewsByCategory(category: string) {
+export async function getHeadlineNews(): Promise<NewsData> {
   const res = await fetch(
-    `${process.env.BING_API_URL}/news?mkt=en-us&category=${category}`,
+    `${process.env.NEXT_PUBLIC_BING_API_URL}/news?mkt=en-us&count=24`,
     {
       headers: {
-        'Ocp-Apim-Subscription-Key': process.env.SUBSCRIPTION_KEY as string,
+        'Ocp-Apim-Subscription-Key': process.env
+          .NEXT_PUBLIC_SUBSCRIPTION_KEY as string,
       },
     }
   );
@@ -29,12 +16,31 @@ export async function getNewsByCategory(category: string) {
   return res.json();
 }
 
-export async function getNewsResults(searchQuery: string) {
+export async function getNewsByCategory(category: string): Promise<NewsData> {
   const res = await fetch(
-    `${process.env.BING_API_URL}/news/search?mkt=en-us&q=${searchQuery}`,
+    `${process.env.NEXT_PUBLIC_BING_API_URL}/news?mkt=en-us&category=${category}&count=24`,
     {
       headers: {
-        'Ocp-Apim-Subscription-Key': process.env.SUBSCRIPTION_KEY as string,
+        'Ocp-Apim-Subscription-Key': process.env
+          .NEXT_PUBLIC_SUBSCRIPTION_KEY as string,
+      },
+    }
+  );
+
+  if (!res.ok) {
+    throw new Error('error');
+  }
+
+  return res.json();
+}
+
+export async function getNewsResults(searchQuery: string, pageParam: number) {
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_BING_API_URL}/news/search?mkt=en-us&q=${searchQuery}&count=24&offset=${pageParam}`,
+    {
+      headers: {
+        'Ocp-Apim-Subscription-Key': process.env
+          .NEXT_PUBLIC_SUBSCRIPTION_KEY as string,
       },
     }
   );

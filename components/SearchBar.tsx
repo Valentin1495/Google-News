@@ -1,18 +1,26 @@
 'use client';
 
-import { ChangeEvent, FormEvent, MouseEvent, useState } from 'react';
+import { ChangeEvent, FormEvent, MouseEvent, useEffect, useState } from 'react';
 import { MagnifyingGlassIcon, XMarkIcon } from './Icons';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 
 export default function SearchBar() {
-  const [searchQuery, setSearchQuery] = useState<string>('');
+  const [searchQuery, setSearchQuery] = useState<string>();
   const [inputFocused, setInputFocused] = useState<boolean>(false);
   const router = useRouter();
+  const searchParams = useSearchParams();
 
   const search = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     router.push('/news/search?q=' + searchQuery);
   };
+
+  const query = searchParams.get('q');
+  const modifiedQuery = query?.replace(/\s+/g, ' ');
+
+  useEffect(() => {
+    setSearchQuery(modifiedQuery);
+  }, [modifiedQuery]);
 
   return (
     <form
@@ -24,7 +32,7 @@ export default function SearchBar() {
       <button
         type='submit'
         className='hover:bg-neutral-200 transition-colors rounded-full p-2 disabled:cursor-not-allowed'
-        disabled={!searchQuery.trim()}
+        disabled={searchQuery === undefined || !searchQuery.trim()}
       >
         <MagnifyingGlassIcon className='w-5 h-5' />
       </button>

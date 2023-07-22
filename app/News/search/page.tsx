@@ -1,43 +1,26 @@
-import { NewspaperIcon } from '@/components/Icons';
-import NewsCard from '@/components/NewsCard';
-import Pagination from '@/components/Pagination';
-import { getNewsResults } from '@/lib/news';
-import { mockNewsResults } from '@/mockData';
+import SearchResults from '@/components/SearchResults';
 
-type searchParams = {
-  q: string;
-};
-
-export function generateMetadata() {
-  return {
-    title: 'Google News' + ' - ' + 'Search',
-  };
-}
-
-export default async function SearchNews({
+export function generateMetadata({
   searchParams,
 }: {
-  searchParams: searchParams;
+  searchParams: SearchParams;
 }) {
-  //   const newsResults = await getNewsResults(searchParams.q);
+  const modifiedQuery = searchParams.q.replace(/\s+/g, ' ');
 
-  const { value: newsResults, totalEstimatedMatches } = mockNewsResults;
-  const total = 100;
+  return {
+    title: modifiedQuery + ' - ' + 'Google News Search',
+  };
+}
+export default function SearchNews({
+  searchParams,
+}: {
+  searchParams: SearchParams;
+}) {
+  const modifiedQuery = searchParams.q.replace(/\s+/g, ' ');
 
   return (
-    <main className='py-10 space-y-5'>
-      <div>
-        <div className='flex items-center space-x-2'>
-          <NewspaperIcon className='w-8 h-8' />
-          <h1 className='text-3xl font-medium'>Results: {total}</h1>
-        </div>
-      </div>
-      <div className='bg-white p-5 rounded-md grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 shadow-md'>
-        {newsResults.map((news, idx) => (
-          <NewsCard key={idx} {...news} />
-        ))}
-        <Pagination pages={Math.ceil((total as number) / 12)} />
-      </div>
+    <main className='py-10'>
+      <SearchResults modifiedQuery={modifiedQuery} />
     </main>
   );
 }
