@@ -11,6 +11,7 @@ export function generateMetadata({
     title: modifiedQuery + ' - ' + 'Google News Search',
   };
 }
+
 export default function SearchNews({
   searchParams,
 }: {

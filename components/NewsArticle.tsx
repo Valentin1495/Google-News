@@ -2,12 +2,17 @@ import { formatDistanceToNowStrict } from 'date-fns';
 import Image from 'next/image';
 import FollowBtn from './FollowBtn';
 
+interface NewsWithClassName extends News {
+  className: string;
+}
+
 export default function NewsArticle({
   name,
   url,
   provider,
   datePublished,
-}: News) {
+  className,
+}: NewsWithClassName) {
   const { name: providerName, image: providerImage } = provider[0];
   const providerImgSrc = providerImage && providerImage.thumbnail.contentUrl;
   const timeAgo = formatDistanceToNowStrict(new Date(datePublished), {
@@ -15,20 +20,17 @@ export default function NewsArticle({
   });
 
   return (
-    <div className='last:border-b-0 border-b-2 border-neutral-200 h-36'>
+    <div className={className}>
       <div className='flex items-center my-2 justify-between'>
         <div className='flex items-center gap-x-2'>
           {providerImgSrc ? (
-            <section className='relative w-8 h-8 rounded-full overflow-hidden'>
-              <Image
-                src={providerImgSrc}
-                alt='provider pic'
-                fill
-                priority
-                sizes='100%'
-                className='object-cover'
-              />
-            </section>
+            <Image
+              src={providerImgSrc}
+              alt='News provider picture'
+              width={32}
+              height={32}
+              className='object-cover rounded-full'
+            />
           ) : (
             <section className='bg-neutral-200 rounded-full w-8 h-8'></section>
           )}

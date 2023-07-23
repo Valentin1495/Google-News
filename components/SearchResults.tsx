@@ -2,7 +2,7 @@
 
 import { FileSearchIcon } from '@/components/Icons';
 import Loader from '@/components/Loader';
-import MatchedArticle from '@/components/MatchedArticle';
+import NewsArticle from '@/components/NewsArticle';
 import { useInfiniteQuery } from '@tanstack/react-query';
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
@@ -62,7 +62,11 @@ export default function SearchResults({
                     className='grid sm:grid-cols-2 lg:grid-cols-3 gap-3'
                   >
                     {news.value.map((article: News, idx: number) => (
-                      <MatchedArticle key={idx} {...article} />
+                      <NewsArticle
+                        key={idx}
+                        {...article}
+                        className='article-by-query'
+                      />
                     ))}
                   </div>
                 ))}

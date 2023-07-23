@@ -13,7 +13,7 @@ type News = {
       };
     }
   ];
-  category?: string;
+
   datePublished: string;
 };
 

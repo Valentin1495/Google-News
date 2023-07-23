@@ -9,7 +9,8 @@ type NavLinkType = {
 
 export default function NavLink({ category }: NavLinkType) {
   const pathname = usePathname();
-  const href = '/news/' + category;
+
+  const href = category === 'home' ? '/' : '/' + category;
   const modified = category.charAt(0).toUpperCase() + category.slice(1);
 
   const active = pathname === href;

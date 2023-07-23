@@ -8,17 +8,15 @@ export default function Header() {
   return (
     <header className='sticky top-0 bg-white z-10 shadow-md pt-2 pb-4 sm:pb-0 xl:pb-4 px-4'>
       <div className='flex items-center justify-between'>
-        <Link href={'/news/home'} className='flex items-center space-x-1.5'>
-          <div className='relative h-10 w-20'>
-            <Image
-              src={
-                'https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg'
-              }
-              alt='Google logo'
-              fill
-              priority
-            />
-          </div>
+        <Link href={'/'} className='flex items-center space-x-1.5'>
+          <Image
+            src={
+              'https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg'
+            }
+            alt='Google logo'
+            width={80}
+            height={160}
+          />
           <span className='text-xl text-neutral-500 font-medium'>News</span>
         </Link>
         <SearchBar />
