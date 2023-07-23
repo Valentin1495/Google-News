@@ -25,3 +25,7 @@ type NewsData = {
 type SearchParams = {
   q: string;
 };
+
+type PageParams = {
+  page: number;
+};

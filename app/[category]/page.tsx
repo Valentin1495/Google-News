@@ -1,12 +1,13 @@
 import { NewspaperIcon } from '@/components/Icons';
-import { categories } from '@/components/Navbar';
 import NewsArticle from '@/components/NewsArticle';
+import PageLink from '@/components/PageLink';
 import { getNewsByCategory } from '@/lib/news';
+import pageToOffset from '@/lib/pageToOffset';
 import { mockNewsByCategory } from '@/mockData';
-import { notFound } from 'next/navigation';
 
 type NewsProps = {
   params: { category: string };
+  searchParams: { page: number };
 };
 
 export function generateMetadata({ params }: NewsProps) {
@@ -18,15 +19,17 @@ export function generateMetadata({ params }: NewsProps) {
   };
 }
 
-export default async function NewsByCategory({ params }: NewsProps) {
+export default async function NewsByCategory({
+  params,
+  searchParams,
+}: NewsProps) {
   const category = params.category;
+  const offset = pageToOffset(searchParams.page);
   const modified = category.charAt(0).toUpperCase() + category.slice(1);
 
-  // const newsByCategoryData = await getNewsByCategory(category);
+  // const newsByCategoryData = await getNewsByCategory(category, offset);
   const newsByCategoryData: NewsData = mockNewsByCategory;
   const newsByCategoryList = newsByCategoryData.value;
-
-  if (!categories.includes(category)) return notFound();
 
   return (
     <main className='py-10 space-y-5'>
@@ -49,6 +52,14 @@ export default async function NewsByCategory({ params }: NewsProps) {
             <NewsArticle key={idx} {...news} className='article-by-category' />
           ))}
         </div>
+      </div>
+
+      <div className='space-x-10 text-center'>
+        <PageLink href={'?page=1'}>1</PageLink>
+        <PageLink href={'?page=2'}>2</PageLink>
+        <PageLink href={'?page=3'}>3</PageLink>
+        <PageLink href={'?page=4'}>4</PageLink>
+        <PageLink href={'?page=5'}>5</PageLink>
       </div>
     </main>
   );

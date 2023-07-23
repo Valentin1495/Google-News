@@ -10,10 +10,10 @@ type NavLinkType = {
 export default function NavLink({ category }: NavLinkType) {
   const pathname = usePathname();
 
-  const href = category === 'home' ? '/' : '/' + category;
+  const href = category === 'home' ? '/' : `/${category}?page=1`;
   const modified = category.charAt(0).toUpperCase() + category.slice(1);
 
-  const active = pathname === href;
+  const active = pathname === href.split('?')[0];
 
   return (
     <Link
