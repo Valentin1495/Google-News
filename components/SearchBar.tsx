@@ -5,7 +5,7 @@ import { MagnifyingGlassIcon, XMarkIcon } from './Icons';
 import { useRouter, useSearchParams } from 'next/navigation';
 
 export default function SearchBar() {
-  const [searchQuery, setSearchQuery] = useState<string>();
+  const [searchQuery, setSearchQuery] = useState<string>('');
   const [inputFocused, setInputFocused] = useState<boolean>(false);
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -20,7 +20,7 @@ export default function SearchBar() {
 
   useEffect(() => {
     if (query) {
-      setSearchQuery(modifiedQuery);
+      setSearchQuery(modifiedQuery as string);
     } else {
       setSearchQuery('');
     }
