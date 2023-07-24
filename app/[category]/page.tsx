@@ -1,9 +1,11 @@
 import { NewspaperIcon } from '@/components/Icons';
+import { categories } from '@/components/Navbar';
 import NewsArticle from '@/components/NewsArticle';
 import PageLink from '@/components/PageLink';
 import { getNewsByCategory } from '@/lib/news';
 import pageToOffset from '@/lib/pageToOffset';
 import { mockNewsByCategory } from '@/mockData';
+import { notFound } from 'next/navigation';
 
 type NewsProps = {
   params: { category: string };
@@ -30,6 +32,9 @@ export default async function NewsByCategory({
   // const newsByCategoryData = await getNewsByCategory(category, offset);
   const newsByCategoryData: NewsData = mockNewsByCategory;
   const newsByCategoryList = newsByCategoryData.value;
+  const newCategories = categories.slice(1);
+
+  if (!newCategories?.includes(category)) return notFound();
 
   return (
     <main className='py-10 space-y-5'>

@@ -15,7 +15,7 @@ export default function Error({
   }, [error]);
 
   return (
-    <div>
+    <div className='flex flex-col gap-y-3 justify-center items-center h-[calc(100vh-108px)]'>
       <h2>Something went wrong!</h2>
       <button
         onClick={

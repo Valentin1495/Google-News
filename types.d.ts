@@ -29,3 +29,13 @@ type SearchParams = {
 type PageParams = {
   page: number;
 };
+
+type UserInfo = {
+  name: string;
+  email: string;
+  image: string;
+};
+
+type User = {
+  user: UserInfo;
+} | null;
