@@ -12,7 +12,7 @@ type NewsProps = {
 
 export function generateMetadata({ params }: NewsProps) {
   const category = params.category;
-  const modified = category.charAt(0).toUpperCase() + category.slice(1);
+  const modified = category[0].toUpperCase() + category.slice(1);
 
   return {
     title: 'Google News' + ' - ' + modified,
@@ -25,7 +25,7 @@ export default async function NewsByCategory({
 }: NewsProps) {
   const category = params.category;
   const offset = pageToOffset(searchParams.page);
-  const modified = category.charAt(0).toUpperCase() + category.slice(1);
+  const modified = category[0].toUpperCase() + category.slice(1);
 
   // const newsByCategoryData = await getNewsByCategory(category, offset);
   const newsByCategoryData: NewsData = mockNewsByCategory;
