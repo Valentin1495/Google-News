@@ -6,7 +6,7 @@ export default async function Home() {
   // const headlineNewsData = await getHeadlineNews();
   const headlineNewsData: NewsData = mockNewsByCategory;
   const headlineNewsList = headlineNewsData.value;
-
+  return new Error('asdf');
   return (
     <main className='py-10 space-y-5'>
       <div className='flex items-center gap-x-2 '>

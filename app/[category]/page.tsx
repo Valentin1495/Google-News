@@ -26,7 +26,8 @@ export default async function NewsByCategory({
   searchParams,
 }: NewsProps) {
   const category = params.category;
-  const offset = pageToOffset(searchParams.page);
+  const pageParams = searchParams.page;
+  const offset = pageToOffset(pageParams);
   const modified = category[0].toUpperCase() + category.slice(1);
 
   // const newsByCategoryData = await getNewsByCategory(category, offset);
@@ -34,7 +35,7 @@ export default async function NewsByCategory({
   const newsByCategoryList = newsByCategoryData.value;
   const newCategories = categories.slice(1);
 
-  if (!newCategories?.includes(category)) return notFound();
+  if (!newCategories?.includes(category) || pageParams > 5) return notFound();
 
   return (
     <main className='py-10 space-y-5'>

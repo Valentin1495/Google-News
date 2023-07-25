@@ -22,4 +22,8 @@
   .article-by-query {
     @apply bg-white flex flex-col justify-between p-4 rounded-md shadow-sm;
   }
+
+  .loading-skeleton {
+    @apply bg-neutral-200 h-36 aspect-video rounded-md shadow-md animate-pulse;
+  }
 }

@@ -32,8 +32,13 @@ export default async function Header() {
           {session && user ? (
             <ProfilePic user={user} />
           ) : (
-            <Link href={'/api/auth/signin'} className='mt-1.5'>
-              <LogInIcon className='w-8 h-8' />
+            <Link
+              href={'/api/auth/signin'}
+              className='mt-1.5 flex items-center gap-x-1.5
+               bg-sky-400 p-1.5 rounded-md hover:scale-110 transition-transform'
+            >
+              <LogInIcon className='w-5 h-5 text-white' />
+              <span className='text-white font-bold text-sm'>Sign in</span>
             </Link>
           )}
         </div>

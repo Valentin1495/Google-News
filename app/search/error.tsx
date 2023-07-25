@@ -22,6 +22,7 @@ export default function Error({
           // Attempt to recover by trying to re-render the segment
           () => reset()
         }
+        className='bg-sky-200 rounded-md p-2 text-neutral-500'
       >
         Try again
       </button>

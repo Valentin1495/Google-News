@@ -2,7 +2,7 @@
 
 import { StarIcon } from './Icons';
 
-export default function FollowBtn() {
+export default function SaveBtn() {
   return (
     <button
       onClick={() => {}}

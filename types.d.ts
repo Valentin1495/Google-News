@@ -6,11 +6,6 @@ type News = {
     {
       _type: string;
       name: string;
-      image: {
-        thumbnail: {
-          contentUrl: string;
-        };
-      };
     }
   ];
 

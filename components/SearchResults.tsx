@@ -7,6 +7,7 @@ import { useInfiniteQuery } from '@tanstack/react-query';
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { getNewsResults } from '@/lib/news';
+import LoadingSkeleton from './LoadingSkeleton';
 
 export default function SearchResults({
   modifiedQuery,
@@ -21,7 +22,7 @@ export default function SearchResults({
       const nextPageIndex = allPages.length * 20;
 
       // We want to get the next page as long as there's data in the last page
-      return lastPage.value.length > 0 ? nextPageIndex : undefined;
+      return lastPage.value.length === 24 ? nextPageIndex : undefined;
     },
   });
 
@@ -36,9 +37,7 @@ export default function SearchResults({
   return (
     <>
       {status === 'loading' ? (
-        <div className='flex justify-center'>
-          <Loader />
-        </div>
+        <LoadingSkeleton />
       ) : status === 'error' ? (
         <h1 className='text-red-500 font-medium text-xl text-center'>Error</h1>
       ) : (

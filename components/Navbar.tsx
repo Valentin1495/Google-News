@@ -16,7 +16,10 @@ export default function Navbar() {
   return (
     <nav className='mt-4 grid grid-cols-4 gap-3 xl:gap-0 xl:flex xl:items-center xl:justify-between w-2/3 mx-auto'>
       {categories.slice(0, 3).map((category, idx) => (
-        <div key={idx} className='flex justify-center items-center'>
+        <div
+          key={idx}
+          className='flex justify-center items-center w-fit sm:w-auto'
+        >
           <NavLink category={category} />
         </div>
       ))}
