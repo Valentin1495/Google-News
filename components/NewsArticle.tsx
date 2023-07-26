@@ -25,7 +25,12 @@ export default function NewsArticle({
           <BoomBoxIcon className='w-5 h-5' />
           <section className='font-light w-52 truncate'>{providerName}</section>
         </div>
-        <SaveBtn />
+        <SaveBtn
+          providerName={providerName}
+          name={name}
+          url={url}
+          timeAgo={timeAgo}
+        />
       </div>
 
       <a
