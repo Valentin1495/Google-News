@@ -1,9 +1,17 @@
 import '@/app/globals.css';
+import Header from '@/components/Header';
 
 export default function NewsByCategoryLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return <div>{children}</div>;
+  return (
+    <div>
+      <Header />
+      <div className='max-w-xs sm:max-w-lg md:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto'>
+        {children}
+      </div>
+    </div>
+  );
 }

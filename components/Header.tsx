@@ -33,7 +33,7 @@ export default async function Header() {
             <ProfilePic user={user} />
           ) : (
             <Link
-              href={'/api/auth/signin'}
+              href={'/auth/signin'}
               className='mt-1.5 flex items-center gap-x-1.5
                bg-sky-400 p-1.5 rounded-md hover:scale-110 transition-transform'
             >
