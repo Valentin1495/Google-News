@@ -1,3 +1,9 @@
-export default function SavedStories() {
-  return <div>SavedStories</div>;
+import SavedStories from '@/components/SavedStories';
+
+export default function MySavedStories() {
+  return (
+    <div>
+      <SavedStories />
+    </div>
+  );
 }

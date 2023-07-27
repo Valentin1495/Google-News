@@ -45,8 +45,8 @@ export default function UserDropdown({
         href={'/my-saved-stories'}
         className='flex gap-x-3 hover:bg-sky-200 p-3 transition-colors cursor-pointer'
       >
-        <StarIcon className='w-6 h-6' />
-        <p>Saved stories</p>
+        <StarIcon className='w-6 h-6 text-neutral-600' />
+        <p className='text-neutral-600'>Saved stories</p>
       </Link>
     </div>
   );

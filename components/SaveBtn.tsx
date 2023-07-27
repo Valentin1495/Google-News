@@ -23,6 +23,7 @@ export default function SaveBtn({
 
   const saveStory = async () => {
     await addDoc(collection(db, 'users', email, 'saved stories'), {
+      createdAt: serverTimestamp(),
       providerName,
       name,
       url,
