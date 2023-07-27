@@ -5,7 +5,7 @@ import { StarIcon } from './Icons';
 import db from '@/firebase';
 import { useSession } from 'next-auth/react';
 
-type SaveBtnProps = {
+export type SaveBtnProps = {
   providerName: string;
   name: string;
   url: string;
