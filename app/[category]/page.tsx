@@ -47,7 +47,11 @@ export default async function NewsByCategory({
       <div className='bg-white p-5 rounded-md flex flex-col md:flex-row md:gap-x-4 shadow-md h-full'>
         <div className='flex flex-col gap-y-4 md:w-1/2'>
           {newsByCategoryList.slice(0, 6).map((news, idx) => (
-            <NewsArticle key={idx} {...news} className='article-by-category' />
+            <NewsArticle
+              key={news.url}
+              {...news}
+              className='article-by-category'
+            />
           ))}
         </div>
 
@@ -55,7 +59,11 @@ export default async function NewsByCategory({
 
         <div className='flex flex-col gap-y-4 md:w-1/2'>
           {newsByCategoryList.slice(6, 12).map((news, idx) => (
-            <NewsArticle key={idx} {...news} className='article-by-category' />
+            <NewsArticle
+              key={news.url}
+              {...news}
+              className='article-by-category'
+            />
           ))}
         </div>
       </div>

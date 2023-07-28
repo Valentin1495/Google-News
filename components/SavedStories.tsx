@@ -4,9 +4,9 @@ import db from '@/firebase';
 import { collection, orderBy, query } from 'firebase/firestore';
 import { useSession } from 'next-auth/react';
 import { useCollection } from 'react-firebase-hooks/firestore';
-import SavedStory, { SavedStoryProps } from './SavedStory';
+import SavedStory from './SavedStory';
 import { NewspaperIcon } from './Icons';
-import { SaveBtnProps } from './SaveBtn';
+import { SaveToggleBtnProps } from './SaveToggleBtn';
 
 export default function SavedStories() {
   const { data: session } = useSession();
@@ -27,10 +27,9 @@ export default function SavedStories() {
       </div>
       <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-3'>
         {stories?.docs.map((doc) => {
-          const data = doc.data() as SaveBtnProps;
-          const savedStory = { ...data, storyId: doc.id };
+          const data = doc.data() as SaveToggleBtnProps;
 
-          return <SavedStory key={doc.id} {...savedStory} />;
+          return <SavedStory key={doc.id} {...data} />;
         })}
       </div>
     </div>

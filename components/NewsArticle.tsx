@@ -1,12 +1,15 @@
 import { formatDistanceToNowStrict } from 'date-fns';
-import SaveBtn from './SaveBtn';
+import SaveToggleBtn from './SaveToggleBtn';
 import { BoomBoxIcon } from './Icons';
+import { getServerSession } from 'next-auth';
+import authOptions from '@/app/api/auth/[...nextauth]/authOptions';
+import StarBtn from './StarBtn';
 
 interface NewsWithClassName extends News {
   className: string;
 }
 
-export default function NewsArticle({
+export default async function NewsArticle({
   name,
   url,
   provider,
@@ -17,6 +20,7 @@ export default function NewsArticle({
   const timeAgo = formatDistanceToNowStrict(new Date(datePublished), {
     addSuffix: true,
   });
+  const session = await getServerSession(authOptions);
 
   return (
     <div className={className}>
@@ -25,12 +29,17 @@ export default function NewsArticle({
           <BoomBoxIcon className='w-5 h-5' />
           <section className='font-light w-52 truncate'>{providerName}</section>
         </div>
-        <SaveBtn
-          providerName={providerName}
-          name={name}
-          url={url}
-          timeAgo={timeAgo}
-        />
+        {session ? (
+          <SaveToggleBtn
+            providerName={providerName}
+            name={name}
+            url={url}
+            timeAgo={timeAgo}
+            newsId={url}
+          />
+        ) : (
+          <StarBtn />
+        )}
       </div>
 
       <a

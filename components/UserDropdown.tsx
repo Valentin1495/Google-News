@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { StarIcon } from './Icons';
+import { SolidStarIcon } from './Icons';
 import { Dispatch, RefObject, SetStateAction } from 'react';
 import Link from 'next/link';
 import SignOut from './SignOut';
@@ -43,9 +43,9 @@ export default function UserDropdown({
       <Link
         onClick={() => setShow(false)}
         href={'/my-saved-stories'}
-        className='flex gap-x-3 hover:bg-sky-200 p-3 transition-colors cursor-pointer'
+        className='flex gap-x-3 hover:bg-neutral-100 p-3 transition-colors cursor-pointer'
       >
-        <StarIcon className='w-6 h-6 text-neutral-600' />
+        <SolidStarIcon className='w-6 h-6 text-sky-500' />
         <p className='text-neutral-600'>Saved stories</p>
       </Link>
     </div>

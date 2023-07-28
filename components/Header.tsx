@@ -18,11 +18,11 @@ export default async function Header() {
         <Link href={'/'} className='flex items-center space-x-1.5'>
           <Image
             src={
-              'https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg'
+              'https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/235px-Google_%22G%22_Logo.svg.png'
             }
             alt='Google logo'
-            width={80}
-            height={160}
+            width={25}
+            height={25}
           />
           <span className='text-xl text-neutral-500 font-medium'>News</span>
         </Link>

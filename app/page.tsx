@@ -20,9 +20,9 @@ export default async function Home() {
 
           <div className='bg-white p-5 rounded-md flex flex-col md:flex-row md:gap-x-4 shadow-md h-full'>
             <div className='flex flex-col gap-y-4 md:w-1/2'>
-              {headlineNewsList.slice(0, 6).map((news, idx) => (
+              {headlineNewsList.slice(0, 6).map((news) => (
                 <NewsArticle
-                  key={idx}
+                  key={news.url}
                   {...news}
                   className='article-by-category'
                 />
@@ -32,9 +32,9 @@ export default async function Home() {
             <div className='bg-neutral-200 h-[1.5px] md:h-auto md:w-[2px] mb-4 md:mb-0'></div>
 
             <div className='flex flex-col gap-y-4 md:w-1/2'>
-              {headlineNewsList.slice(6, 12).map((news, idx) => (
+              {headlineNewsList.slice(6, 12).map((news) => (
                 <NewsArticle
-                  key={idx}
+                  key={news.url}
                   {...news}
                   className='article-by-category'
                 />

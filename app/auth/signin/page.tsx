@@ -11,7 +11,7 @@ export default function Signin() {
         onClick={() => signIn('google', { callbackUrl: '/' })}
         className='text-sky-500 font-bold text-xl animate-pulse'
       >
-        Sign in to save stories
+        Sign in
       </button>
     </div>
   );

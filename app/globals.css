@@ -26,4 +26,12 @@
   .loading-skeleton {
     @apply bg-neutral-200 h-36 aspect-video rounded-md shadow-md animate-pulse;
   }
+
+  .modal-contents {
+    @apply fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40 rounded-lg bg-white;
+  }
+
+  .modal-overlay {
+    @apply fixed inset-0 bg-black/10 z-30;
+  }
 }

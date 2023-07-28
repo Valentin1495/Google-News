@@ -1,18 +1,13 @@
 import { BoomBoxIcon } from './Icons';
-import { SaveBtnProps } from './SaveBtn';
-import UnsaveBtn from './UnsaveBtn';
-
-export interface SavedStoryProps extends SaveBtnProps {
-  storyId: string;
-}
+import SaveToggleBtn, { SaveToggleBtnProps } from './SaveToggleBtn';
 
 export default function SavedStory({
   providerName,
   name,
   url,
   timeAgo,
-  storyId,
-}: SavedStoryProps) {
+  newsId,
+}: SaveToggleBtnProps) {
   return (
     <div className='article-by-query'>
       <div className='flex items-center my-2 justify-between'>
@@ -20,7 +15,13 @@ export default function SavedStory({
           <BoomBoxIcon className='w-5 h-5' />
           <section className='font-light w-52 truncate'>{providerName}</section>
         </div>
-        <UnsaveBtn storyId={storyId} />
+        <SaveToggleBtn
+          providerName={providerName}
+          name={name}
+          url={url}
+          timeAgo={timeAgo}
+          newsId={newsId}
+        />
       </div>
 
       <a

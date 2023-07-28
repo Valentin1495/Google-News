@@ -60,9 +60,9 @@ export default function SearchResults({
                     key={i}
                     className='grid sm:grid-cols-2 lg:grid-cols-3 gap-3'
                   >
-                    {news.value.map((article: News, idx: number) => (
+                    {news.value.map((article: News) => (
                       <NewsArticle
-                        key={idx}
+                        key={article.url}
                         {...article}
                         className='article-by-query'
                       />
