@@ -1,9 +1,9 @@
-import { NewspaperIcon } from '@/components/Icons';
-import { categories } from '@/components/Navbar';
-import NewsArticle from '@/components/NewsArticle';
-import PageLink from '@/components/PageLink';
+import { NewspaperIcon } from '@/components/icons';
+import { categories } from '@/components/navbar';
+import NewsArticle from '@/components/news-article';
+import PageLink from '@/components/page-link';
 import { getNewsByCategory } from '@/lib/news';
-import pageToOffset from '@/lib/pageToOffset';
+import pageToOffset from '@/lib/page-to-offset';
 import { mockNewsByCategory } from '@/mockData';
 import { notFound } from 'next/navigation';
 

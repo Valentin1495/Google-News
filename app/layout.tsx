@@ -1,9 +1,9 @@
-import SessionProvider from '@/Providers/SessionProvider';
+import SessionProvider from '@/providers/session-provider';
 import '@/app/globals.css';
 import type { Metadata } from 'next';
 import { getServerSession } from 'next-auth';
 import { authOptions } from './api/auth/[...nextauth]/authOptions';
-import Toast from '@/components/Toast';
+import Toast from '@/components/toast';
 
 export const metadata: Metadata = {
   title: 'Google News',

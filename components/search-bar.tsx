@@ -1,7 +1,7 @@
 'use client';
 
 import { ChangeEvent, FormEvent, MouseEvent, useEffect, useState } from 'react';
-import { MagnifyingGlassIcon, XMarkIcon } from './Icons';
+import { MagnifyingGlassIcon, XMarkIcon } from './icons';
 import { useRouter, useSearchParams } from 'next/navigation';
 
 export default function SearchBar() {

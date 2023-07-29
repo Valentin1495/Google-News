@@ -10,12 +10,6 @@ export const mockNewsByCategory: NewsData = {
         {
           _type: 'Organization',
           name: 'CNN',
-          image: {
-            thumbnail: {
-              contentUrl:
-                'https://www.bing.com/th?id=ODF.t0BGYosS4GKZSebCajKQGA&pid=news',
-            },
-          },
         },
       ],
       datePublished: '2023-07-13T08:37:25.0000000Z',
@@ -30,12 +24,6 @@ export const mockNewsByCategory: NewsData = {
         {
           _type: 'Organization',
           name: 'Reuters',
-          image: {
-            thumbnail: {
-              contentUrl:
-                'https://www.bing.com/th?id=ODF.jFXbg3L7Ce_1pS4_IOR8CA&pid=news',
-            },
-          },
         },
       ],
       datePublished: '2023-07-13T09:07:51.0000000Z',
@@ -50,12 +38,6 @@ export const mockNewsByCategory: NewsData = {
         {
           _type: 'Organization',
           name: 'The New York Times',
-          image: {
-            thumbnail: {
-              contentUrl:
-                'https://www.bing.com/th?id=ODF.GzcmUDr41J6Qc1JEQyNTCA&pid=news',
-            },
-          },
         },
       ],
       datePublished: '2023-07-12T22:57:22.0000000Z',
@@ -70,12 +52,6 @@ export const mockNewsByCategory: NewsData = {
         {
           _type: 'Organization',
           name: 'Time',
-          image: {
-            thumbnail: {
-              contentUrl:
-                'https://www.bing.com/th?id=ODF.hYLoALMjKIjPBd_pZ2jakg&pid=news',
-            },
-          },
         },
       ],
       datePublished: '2023-07-12T19:30:05.0000000Z',
@@ -90,12 +66,6 @@ export const mockNewsByCategory: NewsData = {
         {
           _type: 'Organization',
           name: 'The Washington Post',
-          image: {
-            thumbnail: {
-              contentUrl:
-                'https://www.bing.com/th?id=ODF.JRpbjhQKSgfe9BXmFtAAoA&pid=news',
-            },
-          },
         },
       ],
       datePublished: '2023-07-12T16:17:51.0000000Z',
@@ -109,12 +79,6 @@ export const mockNewsByCategory: NewsData = {
         {
           _type: 'Organization',
           name: 'The Associated Press',
-          image: {
-            thumbnail: {
-              contentUrl:
-                'https://www.bing.com/th?id=ODF.AlMAEy7MoWNz0OI_xSWQiw&pid=news',
-            },
-          },
         },
       ],
       datePublished: '2023-07-13T04:26:15.0000000Z',
@@ -129,12 +93,6 @@ export const mockNewsByCategory: NewsData = {
         {
           _type: 'Organization',
           name: 'USA TODAY',
-          image: {
-            thumbnail: {
-              contentUrl:
-                'https://www.bing.com/th?id=ODF.m1iod5ODNIyyKu23kGIllQ&pid=news',
-            },
-          },
         },
       ],
       datePublished: '2023-07-12T21:30:21.0000000Z',
@@ -149,12 +107,6 @@ export const mockNewsByCategory: NewsData = {
         {
           _type: 'Organization',
           name: 'The Wall Street Journal',
-          image: {
-            thumbnail: {
-              contentUrl:
-                'https://www.bing.com/th?id=ODF.15fnkpKGfQuTaaskfJ-smw&pid=news',
-            },
-          },
         },
       ],
       datePublished: '2023-07-12T20:09:00.0000000Z',
@@ -169,12 +121,6 @@ export const mockNewsByCategory: NewsData = {
         {
           _type: 'Organization',
           name: 'Reuters',
-          image: {
-            thumbnail: {
-              contentUrl:
-                'https://www.bing.com/th?id=ODF.jFXbg3L7Ce_1pS4_IOR8CA&pid=news',
-            },
-          },
         },
       ],
       datePublished: '2023-07-12T20:24:10.0000000Z',
@@ -189,12 +135,6 @@ export const mockNewsByCategory: NewsData = {
         {
           _type: 'Organization',
           name: 'The Associated Press',
-          image: {
-            thumbnail: {
-              contentUrl:
-                'https://www.bing.com/th?id=ODF.AlMAEy7MoWNz0OI_xSWQiw&pid=news',
-            },
-          },
         },
       ],
       datePublished: '2023-07-13T00:23:36.0000000Z',
@@ -209,12 +149,6 @@ export const mockNewsByCategory: NewsData = {
         {
           _type: 'Organization',
           name: 'BBC',
-          image: {
-            thumbnail: {
-              contentUrl:
-                'https://www.bing.com/th?id=ODF.k3N4DqozNjgK376rAnFmsA&pid=news',
-            },
-          },
         },
       ],
       datePublished: '2023-07-12T13:33:26.0000000Z',
@@ -228,12 +162,6 @@ export const mockNewsByCategory: NewsData = {
         {
           _type: 'Organization',
           name: 'NBC News',
-          image: {
-            thumbnail: {
-              contentUrl:
-                'https://www.bing.com/th?id=ODF.ighWNnrr5MMFUs8WKMme2A&pid=news',
-            },
-          },
         },
       ],
       datePublished: '2023-07-13T04:58:51.0000000Z',
@@ -256,16 +184,9 @@ export const mockNewsResults: NewsData = {
         {
           _type: 'Organization',
           name: 'Business Insider on MSN.com',
-          image: {
-            thumbnail: {
-              contentUrl:
-                'https://www.bing.com/th?id=ODF.q-ZVWyz-qFnnPRsNgOLlfQ&pid=news',
-            },
-          },
         },
       ],
       datePublished: '2023-07-18T12:59:19.0000000Z',
-      category: 'ScienceAndTechnology',
     },
     {
       name: 'Head Of Instagram Announces Threads Will Introduce Rate Limits Like Twitter, Elon Musk Responds',
@@ -277,16 +198,9 @@ export const mockNewsResults: NewsData = {
         {
           _type: 'Organization',
           name: 'BroBible',
-          image: {
-            thumbnail: {
-              contentUrl:
-                'https://www.bing.com/th?id=ODF.oFqg4H-Zlq2mD5Hu0mq8UQ&pid=news',
-            },
-          },
         },
       ],
       datePublished: '2023-07-18T14:28:00.0000000Z',
-      category: 'ScienceAndTechnology',
     },
     {
       name: 'Mark Zuckerberg touts Threads is seeing ‘tens of millions’ people return to the app daily',
@@ -298,12 +212,6 @@ export const mockNewsResults: NewsData = {
         {
           _type: 'Organization',
           name: 'TheStreet.com on MSN.com',
-          image: {
-            thumbnail: {
-              contentUrl:
-                'https://www.bing.com/th?id=ODF.dsVvdYEiGuqZDGlCaqu-ZQ&pid=news',
-            },
-          },
         },
       ],
       datePublished: '2023-07-18T14:29:33.0000000Z',
@@ -319,16 +227,9 @@ export const mockNewsResults: NewsData = {
         {
           _type: 'Organization',
           name: 'The Washington Post',
-          image: {
-            thumbnail: {
-              contentUrl:
-                'https://www.bing.com/th?id=ODF.JRpbjhQKSgfe9BXmFtAAoA&pid=news',
-            },
-          },
         },
       ],
       datePublished: '2023-07-17T21:56:00.0000000Z',
-      category: 'ScienceAndTechnology',
     },
     {
       name: "Threads is taking another page out of Twitter's book",
@@ -340,16 +241,9 @@ export const mockNewsResults: NewsData = {
         {
           _type: 'Organization',
           name: 'Quartz on MSN.com',
-          image: {
-            thumbnail: {
-              contentUrl:
-                'https://www.bing.com/th?id=ODF.o-idNBpSFPJifXI8r9_0Mw&pid=news',
-            },
-          },
         },
       ],
       datePublished: '2023-07-18T10:08:00.0000000Z',
-      category: 'ScienceAndTechnology',
     },
     {
       name: 'Is Threads still considered a rival to Twitter? Expert weighs in',
@@ -362,16 +256,9 @@ export const mockNewsResults: NewsData = {
         {
           _type: 'Organization',
           name: 'KXAN on MSN.com',
-          image: {
-            thumbnail: {
-              contentUrl:
-                'https://www.bing.com/th?id=ODF.NQMhS3nMSzM3OoefIZqTyg&pid=news',
-            },
-          },
         },
       ],
       datePublished: '2023-07-18T13:10:59.0000000Z',
-      category: 'ScienceAndTechnology',
     },
     {
       name: 'Threads users falling away in large numbers, data suggests',
@@ -383,16 +270,9 @@ export const mockNewsResults: NewsData = {
         {
           _type: 'Organization',
           name: 'Digital Trends on MSN.com',
-          image: {
-            thumbnail: {
-              contentUrl:
-                'https://www.bing.com/th?id=ODF.x644vROjZrRe0pKC7YX3XQ&pid=news',
-            },
-          },
         },
       ],
       datePublished: '2023-07-18T06:20:59.0000000Z',
-      category: 'ScienceAndTechnology',
     },
     {
       name: 'Threads users are already spending less time in the app',
@@ -404,16 +284,9 @@ export const mockNewsResults: NewsData = {
         {
           _type: 'Organization',
           name: 'Engadget on MSN.com',
-          image: {
-            thumbnail: {
-              contentUrl:
-                'https://www.bing.com/th?id=ODF.AVdW8o5VMyi101iqCXZFWA&pid=news',
-            },
-          },
         },
       ],
       datePublished: '2023-07-17T18:39:00.0000000Z',
-      category: 'ScienceAndTechnology',
     },
     {
       name: 'Meta’s Threads Could Make—or Break—the Fediverse',
@@ -425,16 +298,9 @@ export const mockNewsResults: NewsData = {
         {
           _type: 'Organization',
           name: 'Wired',
-          image: {
-            thumbnail: {
-              contentUrl:
-                'https://www.bing.com/th?id=ODF.kotzZAtvSAr_gOrTSz2U3g&pid=news',
-            },
-          },
         },
       ],
       datePublished: '2023-07-18T11:55:00.0000000Z',
-      category: 'ScienceAndTechnology',
     },
     {
       name: "Threads is adding new features, but they're not all good…",
@@ -446,16 +312,9 @@ export const mockNewsResults: NewsData = {
         {
           _type: 'Organization',
           name: 'Android on MSN.com',
-          image: {
-            thumbnail: {
-              contentUrl:
-                'https://www.bing.com/th?id=ODF.i6AIwq2PJ-_6zQuxkBFWkw&pid=news',
-            },
-          },
         },
       ],
       datePublished: '2023-07-18T13:14:18.0000000Z',
-      category: 'ScienceAndTechnology',
     },
     {
       name: "Twitter CEO Linda Yaccarino takes a second away from the Twitter and Threads rivalry to show she's an Ed Sheeran and Eminem fan",
@@ -468,12 +327,6 @@ export const mockNewsResults: NewsData = {
         {
           _type: 'Organization',
           name: 'Business Insider on MSN.com',
-          image: {
-            thumbnail: {
-              contentUrl:
-                'https://www.bing.com/th?id=ODF.q-ZVWyz-qFnnPRsNgOLlfQ&pid=news',
-            },
-          },
         },
       ],
       datePublished: '2023-07-18T10:01:16.0000000Z',

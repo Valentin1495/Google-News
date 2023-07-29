@@ -1,8 +1,8 @@
 import Image from 'next/image';
-import { SolidStarIcon } from './Icons';
+import { SolidStarIcon } from './icons';
 import { Dispatch, RefObject, SetStateAction } from 'react';
 import Link from 'next/link';
-import SignOut from './SignOut';
+import SignOut from './sign-out';
 
 type UserDropdownProps = {
   user: UserInfo;

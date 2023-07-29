@@ -1,5 +1,5 @@
-import Dropdown from './Dropdown';
-import NavLink from './NavLink';
+import CategoryDropdown from './category-dropdown';
+import NavLink from './nav-link';
 
 export const categories: string[] = [
   'home',
@@ -29,7 +29,7 @@ export default function Navbar() {
         </div>
       ))}
 
-      <Dropdown />
+      <CategoryDropdown />
     </nav>
   );
 }

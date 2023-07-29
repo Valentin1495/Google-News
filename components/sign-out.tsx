@@ -1,4 +1,4 @@
-import { LogOutIcon } from './Icons';
+import { LogOutIcon } from './icons';
 import { signOut } from 'next-auth/react';
 
 export default function SignOut() {

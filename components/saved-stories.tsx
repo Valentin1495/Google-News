@@ -4,9 +4,9 @@ import db from '@/firebase';
 import { collection, orderBy, query } from 'firebase/firestore';
 import { useSession } from 'next-auth/react';
 import { useCollection } from 'react-firebase-hooks/firestore';
-import SavedStory from './SavedStory';
-import { NewspaperIcon } from './Icons';
-import { SaveToggleBtnProps } from './SaveToggleBtn';
+import SavedStory from './saved-story';
+import { NewspaperIcon } from './icons';
+import { SaveToggleBtnProps } from './save-toggle-btn';
 
 export default function SavedStories() {
   const { data: session } = useSession();

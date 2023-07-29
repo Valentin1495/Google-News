@@ -7,7 +7,7 @@ import {
   serverTimestamp,
   setDoc,
 } from 'firebase/firestore';
-import { OutlineStarIcon, SolidStarIcon } from './Icons';
+import { OutlineStarIcon, SolidStarIcon } from './icons';
 import db from '@/firebase';
 import { useSession } from 'next-auth/react';
 import { useCollection } from 'react-firebase-hooks/firestore';

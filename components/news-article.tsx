@@ -1,9 +1,9 @@
 import { formatDistanceToNowStrict } from 'date-fns';
-import SaveToggleBtn from './SaveToggleBtn';
-import { BoomBoxIcon } from './Icons';
+import SaveToggleBtn from './save-toggle-btn';
+import { BoomBoxIcon } from './icons';
 import { getServerSession } from 'next-auth';
 import authOptions from '@/app/api/auth/[...nextauth]/authOptions';
-import StarBtn from './StarBtn';
+import StarBtn from './star-btn';
 
 interface NewsWithClassName extends News {
   className: string;

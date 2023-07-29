@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import UserDropdown from './UserDropdown';
+import UserDropdown from './user-dropdown';
 import { useRef, useState, useEffect } from 'react';
 
 export default function ProfilePic({ user }: { user: UserInfo }) {

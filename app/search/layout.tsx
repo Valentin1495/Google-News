@@ -1,6 +1,6 @@
-import QueryClientProvider from '@/Providers/QueryClientProvider';
+import QueryClientProvider from '@/providers/query-client-provider';
 import '@/app/globals.css';
-import Header from '@/components/Header';
+import Header from '@/components/header';
 
 export default function NewsSearchLayout({
   children,

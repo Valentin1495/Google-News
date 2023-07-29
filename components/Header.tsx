@@ -1,12 +1,12 @@
 import Image from 'next/image';
-import SearchBar from './SearchBar';
-import SearchBtn from './SearchBtn';
-import Navbar from './Navbar';
+import SearchBar from './search-bar';
+import SearchBtn from './search-btn';
+import Navbar from './navbar';
 import Link from 'next/link';
 import { getServerSession } from 'next-auth';
 import authOptions from '@/app/api/auth/[...nextauth]/authOptions';
-import { LogInIcon } from './Icons';
-import ProfilePic from './ProfilePic';
+import { LogInIcon } from './icons';
+import ProfilePic from './profile-pic';
 
 export default async function Header() {
   const session: User = await getServerSession(authOptions);

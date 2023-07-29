@@ -1,13 +1,5 @@
-import Header from '@/components/Header';
-import Loader from '@/components/Loader';
+import Header from '@/components/header';
 
 export default function Loading() {
-  return (
-    <>
-      <Header />
-      <div className='flex justify-center mt-10'>
-        <Loader width='w-10' height='h-10' />
-      </div>
-    </>
-  );
+  return <Header />;
 }

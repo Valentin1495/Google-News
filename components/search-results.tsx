@@ -1,13 +1,13 @@
 'use client';
 
-import { FileSearchIcon } from '@/components/Icons';
-import Loader from '@/components/Loader';
-import NewsArticle from '@/components/NewsArticle';
+import { FileSearchIcon } from '@/components/icons';
+import Loader from '@/components/loader';
+import NewsArticle from '@/components/news-article';
 import { useInfiniteQuery } from '@tanstack/react-query';
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { getNewsResults } from '@/lib/news';
-import LoadingSkeleton from './LoadingSkeleton';
+import LoadingSkeleton from './loading-skeleton';
 
 export default function SearchResults({
   modifiedQuery,

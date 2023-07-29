@@ -1,5 +1,5 @@
-import { BoomBoxIcon } from './Icons';
-import SaveToggleBtn, { SaveToggleBtnProps } from './SaveToggleBtn';
+import { BoomBoxIcon } from './icons';
+import SaveToggleBtn, { SaveToggleBtnProps } from './save-toggle-btn';
 
 export default function SavedStory({
   providerName,

@@ -1,4 +1,4 @@
-import SearchResults from '@/components/SearchResults';
+import SearchResults from '@/components/search-results';
 
 export function generateMetadata({
   searchParams,

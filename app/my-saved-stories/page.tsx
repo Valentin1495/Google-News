@@ -1,4 +1,4 @@
-import SavedStories from '@/components/SavedStories';
+import SavedStories from '@/components/saved-stories';
 
 export function generateMetadata() {
   return {

@@ -1,11 +1,11 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { categories } from './Navbar';
-import NavLink from './NavLink';
-import { EllipsisIcon } from './Icons';
+import { categories } from './navbar';
+import NavLink from './nav-link';
+import { EllipsisIcon } from './icons';
 
-export default function Dropdown() {
+export default function CategoryDropdown() {
   const [showMenu, setShowMenu] = useState<boolean>(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 

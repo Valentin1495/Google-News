@@ -1,6 +1,6 @@
 'use client';
 
-import { MagnifyingGlassIcon } from './Icons';
+import { MagnifyingGlassIcon } from './icons';
 
 export default function SearchBtn() {
   return (

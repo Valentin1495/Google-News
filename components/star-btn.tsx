@@ -1,9 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import { OutlineStarIcon } from './Icons';
+import { OutlineStarIcon } from './icons';
 import useModal from '@/hooks/useModal';
-import Modal from './Modal';
+import Modal from './modal';
 
 export default function StarBtn() {
   const [showModal, setShowModal] = useState<boolean>(false);
