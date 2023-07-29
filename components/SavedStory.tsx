@@ -13,7 +13,7 @@ export default function SavedStory({
       <div className='flex items-center my-2 justify-between'>
         <div className='flex items-center gap-x-2'>
           <BoomBoxIcon className='w-5 h-5' />
-          <section className='font-light w-52 truncate'>{providerName}</section>
+          <section className='text-sm w-52 truncate'>{providerName}</section>
         </div>
         <SaveToggleBtn
           providerName={providerName}
@@ -32,7 +32,7 @@ export default function SavedStory({
         {name}
       </a>
 
-      <h6 className='text-sm text-neutral-500'>{timeAgo}</h6>
+      <h6 className='text-xs font-bold text-neutral-400'>{timeAgo}</h6>
     </div>
   );
 }
