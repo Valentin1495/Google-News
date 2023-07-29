@@ -1,4 +1,5 @@
 import SessionProvider from '@/providers/session-provider';
+import QueryClientProvider from '@/providers/query-client-provider';
 import '@/app/globals.css';
 import type { Metadata } from 'next';
 import { getServerSession } from 'next-auth';
@@ -22,7 +23,9 @@ export default async function RootLayout({
     <html lang='en' className='bg-sky-50'>
       <body>
         <Toast />
-        <SessionProvider session={session}>{children}</SessionProvider>
+        <SessionProvider session={session}>
+          <QueryClientProvider>{children}</QueryClientProvider>
+        </SessionProvider>
       </body>
     </html>
   );
