@@ -12,6 +12,7 @@ import db from '@/firebase';
 import { useSession } from 'next-auth/react';
 import { useCollection } from 'react-firebase-hooks/firestore';
 import { useEffect, useState } from 'react';
+import toast from 'react-hot-toast';
 
 export type SaveToggleBtnProps = {
   providerName: string;
@@ -43,18 +44,32 @@ export default function SaveToggleBtn({
   }, [savedStories, newsId]);
 
   const saveStory = async () => {
-    await setDoc(doc(db, 'users', email, 'saved stories', newsId), {
-      createdAt: serverTimestamp(),
-      providerName,
-      name,
-      url,
-      timeAgo,
-      newsId,
-    });
+    try {
+      await setDoc(doc(db, 'users', email, 'saved stories', newsId), {
+        createdAt: serverTimestamp(),
+        providerName,
+        name,
+        url,
+        timeAgo,
+        newsId,
+      });
+
+      toast.success('Story saved');
+    } catch (error) {
+      console.error(error);
+      toast.error('Error saving the story');
+    }
   };
 
   const unsaveStory = async () => {
-    await deleteDoc(doc(db, 'users', email, 'saved stories', newsId));
+    try {
+      await deleteDoc(doc(db, 'users', email, 'saved stories', newsId));
+
+      toast.success('Story removed');
+    } catch (error) {
+      console.error(error);
+      toast.error('Error removing the story');
+    }
   };
 
   return saved ? (

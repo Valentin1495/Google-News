@@ -21,6 +21,8 @@ export default async function NewsArticle({
     addSuffix: true,
   });
   const session = await getServerSession(authOptions);
+  const parts = url.split('/');
+  const newsId = parts[parts.length - 1];
 
   return (
     <div className={className}>
@@ -35,7 +37,7 @@ export default async function NewsArticle({
             name={name}
             url={url}
             timeAgo={timeAgo}
-            newsId={url}
+            newsId={newsId}
           />
         ) : (
           <StarBtn />

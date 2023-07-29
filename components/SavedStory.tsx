@@ -13,7 +13,7 @@ export default function SavedStory({
       <div className='flex items-center my-2 justify-between'>
         <div className='flex items-center gap-x-2'>
           <BoomBoxIcon className='w-5 h-5' />
-          <section className='text-sm w-52 truncate'>{providerName}</section>
+          <h6 className='text-sm w-36 truncate'>{providerName}asdfasdfsdf</h6>
         </div>
         <SaveToggleBtn
           providerName={providerName}
