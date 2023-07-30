@@ -8,12 +8,15 @@ export default function ProfilePic({ user }: { user: UserInfo }) {
   const { image } = user;
   const [show, setShow] = useState<boolean>(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const imgRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
     const handleOutsideClick = (e: MouseEvent) => {
       if (
         dropdownRef.current &&
-        !dropdownRef.current.contains(e.target as Node)
+        imgRef.current &&
+        !dropdownRef.current.contains(e.target as Node) &&
+        !imgRef.current.contains(e.target as Node)
       ) {
         setShow(false);
       }
@@ -35,6 +38,7 @@ export default function ProfilePic({ user }: { user: UserInfo }) {
         }`}
       >
         <Image
+          ref={imgRef}
           src={image}
           alt='Profile pic'
           width={40}
