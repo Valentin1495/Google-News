@@ -2,14 +2,14 @@ import { formatDistanceToNowStrict } from 'date-fns';
 import SaveToggleBtn from './save-toggle-btn';
 import { BoomBoxIcon } from './icons';
 import { getServerSession } from 'next-auth';
-import authOptions from '@/app/api/auth/[...nextauth]/authOptions';
 import StarBtn from './star-btn';
+import { authOptions } from '@/app/api/auth/[...nextauth]/authOptions';
 
 interface NewsWithClassName extends News {
   className: string;
 }
 
-export default async function NewsArticle({
+export default async function ServerNewsArticle({
   name,
   url,
   provider,
@@ -21,8 +21,8 @@ export default async function NewsArticle({
     addSuffix: true,
   });
   const session = await getServerSession(authOptions);
-  const parts = url.split('/');
-  const newsId = parts[parts.length - 1];
+
+  const newsId = name;
 
   return (
     <div className={className}>

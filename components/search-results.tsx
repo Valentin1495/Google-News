@@ -2,27 +2,23 @@
 
 import { FileSearchIcon } from '@/components/icons';
 import Loader from '@/components/loader';
-import NewsArticle from '@/components/news-article';
+import ClientNewsArticle from '@/components/client-news-article';
 import { useInfiniteQuery } from '@tanstack/react-query';
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { getNewsResults } from '@/lib/news';
 import LoadingSkeleton from './loading-skeleton';
 
-export default function SearchResults({
-  modifiedQuery,
-}: {
-  modifiedQuery: string;
-}) {
+export default function SearchResults({ query }: { query: string }) {
   const { status, data, fetchNextPage, isFetchingNextPage } = useInfiniteQuery({
-    queryKey: ['news', 'search', modifiedQuery],
-    queryFn: ({ pageParam = 0 }) => getNewsResults(modifiedQuery, pageParam),
+    queryKey: ['news', 'search', query],
+    queryFn: ({ pageParam = 0 }) => getNewsResults(query, pageParam),
     getNextPageParam: (lastPage, allPages) => {
       // For each subsequent page, increment offset by 20
       const nextPageIndex = allPages.length * 20;
 
       // We want to get the next page as long as there's data in the last page
-      return lastPage.value.length === 24 ? nextPageIndex : undefined;
+      return lastPage.value.length >= 24 ? nextPageIndex : undefined;
     },
   });
 
@@ -32,7 +28,7 @@ export default function SearchResults({
     if (inView) {
       fetchNextPage();
     }
-  }, [inView]);
+  }, [inView, fetchNextPage]);
 
   return (
     <>
@@ -61,7 +57,7 @@ export default function SearchResults({
                     className='grid sm:grid-cols-2 lg:grid-cols-3 gap-3'
                   >
                     {news.value.map((article: News) => (
-                      <NewsArticle
+                      <ClientNewsArticle
                         key={article.url}
                         {...article}
                         className='article-by-query'

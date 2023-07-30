@@ -4,7 +4,7 @@ import SearchBtn from './search-btn';
 import Navbar from './navbar';
 import Link from 'next/link';
 import { getServerSession } from 'next-auth';
-import authOptions from '@/app/api/auth/[...nextauth]/authOptions';
+import { authOptions } from '@/app/api/auth/[...nextauth]/authOptions';
 import { LogInIcon } from './icons';
 import ProfilePic from './profile-pic';
 

@@ -9,22 +9,22 @@ export default function ProfilePic({ user }: { user: UserInfo }) {
   const [show, setShow] = useState<boolean>(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-  const handleOutsideClick = (e: MouseEvent) => {
-    if (
-      dropdownRef.current &&
-      !dropdownRef.current.contains(e.target as Node)
-    ) {
-      setShow(false);
-    }
-  };
-
   useEffect(() => {
+    const handleOutsideClick = (e: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(e.target as Node)
+      ) {
+        setShow(false);
+      }
+    };
+
     document.addEventListener('click', handleOutsideClick);
 
     return () => {
       document.removeEventListener('click', handleOutsideClick);
     };
-  }, [handleOutsideClick]);
+  }, []);
 
   return (
     <div className='relative h-10'>

@@ -9,22 +9,22 @@ export default function CategoryDropdown() {
   const [showMenu, setShowMenu] = useState<boolean>(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-  const handleOutsideClick = (e: MouseEvent) => {
-    if (
-      dropdownRef.current &&
-      !dropdownRef.current.contains(e.target as Node)
-    ) {
-      setShowMenu(false);
-    }
-  };
-
   useEffect(() => {
+    const handleOutsideClick = (e: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(e.target as Node)
+      ) {
+        setShowMenu(false);
+      }
+    };
+
     document.addEventListener('click', handleOutsideClick);
 
     return () => {
       document.removeEventListener('click', handleOutsideClick);
     };
-  }, [handleOutsideClick]);
+  }, []);
 
   return (
     <div className='sm:hidden relative'>

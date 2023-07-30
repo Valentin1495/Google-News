@@ -1,4 +1,4 @@
-import authOptions from '@/app/api/auth/[...nextauth]/authOptions';
+import { authOptions } from '@/app/api/auth/[...nextauth]/authOptions';
 import SigninBtn from '@/components/signin-btn';
 import { getServerSession } from 'next-auth';
 import Image from 'next/image';

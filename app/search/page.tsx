@@ -5,10 +5,10 @@ export function generateMetadata({
 }: {
   searchParams: SearchParams;
 }) {
-  const modifiedQuery = searchParams.q.replace(/\s+/g, ' ');
+  const query = searchParams.q;
 
   return {
-    title: modifiedQuery + ' - ' + 'Google News Search',
+    title: query + ' - ' + 'Google News Search',
   };
 }
 
@@ -17,11 +17,11 @@ export default function SearchNews({
 }: {
   searchParams: SearchParams;
 }) {
-  const modifiedQuery = searchParams.q.replace(/\s+/g, ' ');
+  const query = searchParams.q;
 
   return (
     <main className='py-10'>
-      <SearchResults modifiedQuery={modifiedQuery} />
+      <SearchResults query={query} />
     </main>
   );
 }

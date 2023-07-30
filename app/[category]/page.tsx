@@ -1,10 +1,9 @@
 import { NewspaperIcon } from '@/components/icons';
 import { categories } from '@/components/navbar';
-import NewsArticle from '@/components/news-article';
+import ServerNewsArticle from '@/components/server-news-article';
 import PageLink from '@/components/page-link';
 import { getNewsByCategory } from '@/lib/news';
 import pageToOffset from '@/lib/page-to-offset';
-import { mockNewsByCategory } from '@/mockData';
 import { notFound } from 'next/navigation';
 
 type NewsProps = {
@@ -30,12 +29,13 @@ export default async function NewsByCategory({
   const offset = pageToOffset(pageParams);
   const modified = category[0].toUpperCase() + category.slice(1);
 
-  // const newsByCategoryData = await getNewsByCategory(category, offset);
-  const newsByCategoryData: NewsData = mockNewsByCategory;
+  const newsByCategoryData = await getNewsByCategory(category, offset);
   const newsByCategoryList = newsByCategoryData.value;
   const newCategories = categories.slice(1);
 
-  if (!newCategories?.includes(category) || pageParams > 5) return notFound();
+  if (!newCategories?.includes(category) || pageParams > 5) {
+    notFound();
+  }
 
   return (
     <main className='py-10 space-y-5'>
@@ -46,8 +46,8 @@ export default async function NewsByCategory({
 
       <div className='bg-white p-5 rounded-md flex flex-col md:flex-row md:gap-x-4 shadow-md h-full'>
         <div className='flex flex-col gap-y-4 md:w-1/2'>
-          {newsByCategoryList.slice(0, 6).map((news, idx) => (
-            <NewsArticle
+          {newsByCategoryList.slice(0, 6).map((news) => (
+            <ServerNewsArticle
               key={news.url}
               {...news}
               className='article-by-category'
@@ -58,8 +58,8 @@ export default async function NewsByCategory({
         <div className='bg-neutral-200 h-[1.5px] md:h-auto md:w-[2px] mb-4 md:mb-0'></div>
 
         <div className='flex flex-col gap-y-4 md:w-1/2'>
-          {newsByCategoryList.slice(6, 12).map((news, idx) => (
-            <NewsArticle
+          {newsByCategoryList.slice(6, 12).map((news) => (
+            <ServerNewsArticle
               key={news.url}
               {...news}
               className='article-by-category'

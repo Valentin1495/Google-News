@@ -12,15 +12,16 @@ export default function SearchBar() {
 
   const search = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    router.push('/search?q=' + searchQuery);
+    const modifiedQuery = searchQuery.trim().replace(/\s+/g, ' ');
+
+    router.push('/search?q=' + modifiedQuery);
   };
 
   const query = searchParams.get('q');
-  const modifiedQuery = query?.replace(/\s+/g, ' ');
 
   useEffect(() => {
     if (query) {
-      setSearchQuery(modifiedQuery as string);
+      setSearchQuery(query as string);
     } else {
       setSearchQuery('');
     }
