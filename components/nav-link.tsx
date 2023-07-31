@@ -6,10 +6,10 @@ import { Dispatch, SetStateAction } from 'react';
 
 type NavLinkType = {
   category: string;
-  setShowMenu?: Dispatch<SetStateAction<boolean>>;
+  setShowDropdown?: Dispatch<SetStateAction<boolean>>;
 };
 
-export default function NavLink({ category, setShowMenu }: NavLinkType) {
+export default function NavLink({ category, setShowDropdown }: NavLinkType) {
   const pathname = usePathname();
 
   const href = category === 'home' ? '/' : `/${category}?page=1`;
@@ -19,7 +19,7 @@ export default function NavLink({ category, setShowMenu }: NavLinkType) {
 
   return (
     <Link
-      onClick={() => setShowMenu && setShowMenu(false)}
+      onClick={() => setShowDropdown && setShowDropdown(false)}
       href={href}
       className={`${
         active

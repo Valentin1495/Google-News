@@ -2,43 +2,27 @@
 
 import Image from 'next/image';
 import UserDropdown from './user-dropdown';
-import { useRef, useState, useEffect } from 'react';
+import { useRef, useState } from 'react';
+import HandleOutsideClick from './handle-outside-click';
 
 export default function ProfilePic({ user }: { user: UserInfo }) {
   const { image } = user;
-  const [show, setShow] = useState<boolean>(false);
+  const [showDropdown, setShowDropdown] = useState<boolean>(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
-  const imgRef = useRef<HTMLImageElement>(null);
-
-  useEffect(() => {
-    const handleOutsideClick = (e: MouseEvent) => {
-      if (
-        dropdownRef.current &&
-        imgRef.current &&
-        !dropdownRef.current.contains(e.target as Node) &&
-        !imgRef.current.contains(e.target as Node)
-      ) {
-        setShow(false);
-      }
-    };
-
-    document.addEventListener('click', handleOutsideClick);
-
-    return () => {
-      document.removeEventListener('click', handleOutsideClick);
-    };
-  }, []);
+  const btnRef = useRef<HTMLButtonElement>(null);
 
   return (
     <div className='relative h-10'>
       <button
-        onClick={() => setShow((prev) => !prev)}
+        onClick={() => setShowDropdown((prev) => !prev)}
+        ref={btnRef}
         className={`border-4 transition-colors rounded-full ${
-          show ? 'border-sky-300' : 'border-transparent hover:border-sky-200'
+          showDropdown
+            ? 'border-sky-300'
+            : 'border-transparent hover:border-sky-200'
         }`}
       >
         <Image
-          ref={imgRef}
           src={image}
           alt='Profile pic'
           width={40}
@@ -49,9 +33,15 @@ export default function ProfilePic({ user }: { user: UserInfo }) {
 
       <UserDropdown
         user={user}
-        show={show}
-        setShow={setShow}
+        showDropdown={showDropdown}
+        setShowDropdown={setShowDropdown}
         dropdownRef={dropdownRef}
+      />
+
+      <HandleOutsideClick
+        dropdownRef={dropdownRef}
+        btnRef={btnRef}
+        setShowDropdown={setShowDropdown}
       />
     </div>
   );

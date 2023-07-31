@@ -6,15 +6,15 @@ import SignOut from './sign-out';
 
 type UserDropdownProps = {
   user: UserInfo;
-  show: boolean;
-  setShow: Dispatch<SetStateAction<boolean>>;
+  showDropdown: boolean;
+  setShowDropdown: Dispatch<SetStateAction<boolean>>;
   dropdownRef: RefObject<HTMLDivElement>;
 };
 
 export default function UserDropdown({
   user,
-  show,
-  setShow,
+  showDropdown,
+  setShowDropdown,
   dropdownRef,
 }: UserDropdownProps) {
   const { name, email, image } = user;
@@ -23,7 +23,7 @@ export default function UserDropdown({
     <div
       ref={dropdownRef}
       className={`z-20 absolute right-0 bg-white w-[350px] rounded-xl shadow-lg overflow-hidden transition-opacity ${
-        show ? 'opacity-100' : 'opacity-0 pointer-events-none'
+        showDropdown ? 'opacity-100' : 'opacity-0 pointer-events-none'
       }`}
     >
       <div className='flex items-center gap-x-2 p-3'>
@@ -41,7 +41,7 @@ export default function UserDropdown({
       </div>
       <SignOut />
       <Link
-        onClick={() => setShow(false)}
+        onClick={() => setShowDropdown(false)}
         href={'/my-saved-stories'}
         className='flex gap-x-3 hover:bg-neutral-100 p-3 transition-colors cursor-pointer'
       >

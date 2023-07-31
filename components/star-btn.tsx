@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { OutlineStarIcon } from './icons';
-import useModal from '@/hooks/useModal';
+import useModal from '@/hooks/use-modal';
 import Modal from './modal';
 
 export default function StarBtn() {
