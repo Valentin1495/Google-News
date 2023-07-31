@@ -6,7 +6,6 @@ export default function Loading() {
       <div className='flex justify-center min-h-screen items-center'>
         <Loader />
       </div>
-      <div className='blur'></div>
     </div>
   );
 }

@@ -6,7 +6,6 @@ export default function Loading() {
       <div className='flex justify-center mt-10'>
         <Loader />
       </div>
-      <div className='blur'></div>
     </div>
   );
 }
