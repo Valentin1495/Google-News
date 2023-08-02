@@ -54,7 +54,9 @@ export default function SaveToggleBtn({
         newsId,
       });
 
-      toast.success('Story saved');
+      toast('Story saved', {
+        icon: '🎉',
+      });
     } catch (error) {
       console.error(error);
       toast.error('Error saving the story');
@@ -65,7 +67,9 @@ export default function SaveToggleBtn({
     try {
       await deleteDoc(doc(db, 'users', email, 'saved stories', newsId));
 
-      toast.success('Story removed');
+      toast('Story removed', {
+        icon: '🗑️',
+      });
     } catch (error) {
       console.error(error);
       toast.error('Error removing the story');
