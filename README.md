@@ -1,6 +1,6 @@
 # Google News
-A news app built with TypeScript, React, and Next.js 13, providing you with the latest news and updates from various sources.  
-TypeScript, React, Next.js 13를 사용하여 개발된 뉴스 앱으로, 다양한 소스에서 최신 뉴스 및 업데이트를 제공합니다.
+A news app built with TypeScript, React, Next.js 13, and [Bing News Search API](https://learn.microsoft.com/ko-kr/bing/search-apis/bing-news-search/overview), providing you with the latest news and updates from various sources.  
+TypeScript, React, Next.js 13, [Bing News Search API](https://learn.microsoft.com/ko-kr/bing/search-apis/bing-news-search/overview) 를 사용하여 개발한 뉴스 앱으로, 다양한 소스에서 최신 뉴스 및 업데이트를 제공합니다.
 
 ## Table of Contents
 - [Features](#features)
