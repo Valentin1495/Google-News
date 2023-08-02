@@ -1,5 +1,6 @@
 # Google News
-A news app built with TypeScript, React, and Next.js 13, providing you with the latest news and updates from various sources.
+A news app built with TypeScript, React, and Next.js 13, providing you with the latest news and updates from various sources.  
+TypeScript, React, Next.js 13를 사용하여 개발된 뉴스 앱으로, 다양한 소스에서 최신 뉴스 및 업데이트를 제공합니다.
 
 ## Table of Contents
 - [Features](#features)
@@ -8,10 +9,10 @@ A news app built with TypeScript, React, and Next.js 13, providing you with the 
 - [Technologies](#technologies)
 
 ## Features
-- Browse and read the latest news articles from various sources.
-- Search for specific topics or news articles.
-- Save favorite articles for later reference.
-- Responsive design for a seamless experience on all devices.
+- Browse and read the latest news articles from various sources. 다양한 소스에서 최신 뉴스 기사 검색 및 읽기
+- Search for specific topics or news articles. 특정 주제나 뉴스 기사 검색
+- Save favorite articles for later reference. 즐겨찾기 기능으로 관심 있는 기사 저장
+- Responsive design for a seamless experience on all devices. 모든 디바이스에서 원활한 사용을 위한 반응형 디자인
 
 ## Demo
 Check out the live demo [here](https://google-news-delta.vercel.app).
