@@ -9,10 +9,14 @@ TypeScript, React, Next.js 13를 사용하여 개발된 뉴스 앱으로, 다양
 - [Technologies](#technologies)
 
 ## Features
-- Browse and read the latest news articles from various sources. 다양한 소스에서 최신 뉴스 기사 검색 및 읽기
-- Search for specific topics or news articles. 특정 주제나 뉴스 기사 검색
-- Save favorite articles for later reference. 즐겨찾기 기능으로 관심 있는 기사 저장
-- Responsive design for a seamless experience on all devices. 모든 디바이스에서 원활한 사용을 위한 반응형 디자인
+- Browse and read the latest news articles from various sources.  
+  다양한 소스에서 최신 뉴스 기사 검색 및 읽기
+- Search for specific topics or news articles.  
+  특정 주제나 뉴스 기사 검색
+- Save favorite articles for later reference.  
+  즐겨찾기 기능으로 관심 있는 기사 저장
+- Responsive design for a seamless experience on all devices.  
+  모든 디바이스에서 원활한 사용을 위한 반응형 디자인
 
 ## Demo
 Check out the live demo [here](https://google-news-delta.vercel.app).
@@ -42,3 +46,18 @@ Check out the live demo [here](https://google-news-delta.vercel.app).
 - Saved stories page
 
 ![saved stories](https://github.com/Valentin1495/Google-news/assets/69514169/ee1a9665-3b84-4c31-b7de-cad2e463d7d9)
+
+## Technologies
+- TypeScript
+- React
+- Next.js
+- Tailwind CSS
+- React Query
+- Firebase
+- react-firebase-hooks
+- next-auth
+- react-intersection-observer
+- react-hot-toast
+- date-fns
+
+
