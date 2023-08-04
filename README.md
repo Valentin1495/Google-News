@@ -23,7 +23,7 @@ TypeScript, React, Next.js 13, [Bing News Search API](https://learn.microsoft.co
 
 ## Demo
 
-Check out the live demo [here](https://google-news-delta.vercel.app).
+Check out the live demo [here](https://news.noahhan.vercel.app).
 
 ## Screenshots
 
