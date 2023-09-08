@@ -2,8 +2,6 @@ import { NewspaperIcon } from '@/components/icons';
 import { categories } from '@/components/navbar';
 import ServerNewsArticle from '@/components/server-news-article';
 import PageLink from '@/components/page-link';
-import { getNewsByCategory } from '@/lib/news';
-import pageToOffset from '@/lib/page-to-offset';
 import { notFound } from 'next/navigation';
 
 type NewsProps = {
@@ -26,10 +24,12 @@ export default async function NewsByCategory({
 }: NewsProps) {
   const category = params.category;
   const pageParams = searchParams.page;
-  const offset = pageToOffset(pageParams);
   const modified = category[0].toUpperCase() + category.slice(1);
 
-  const newsByCategoryData = await getNewsByCategory(category, offset);
+  const res = await fetch('http://localhost:3000/api/newsByCategory');
+
+  const newsByCategoryData: NewsData = await res.json();
+  console.log(newsByCategoryData);
   const newsByCategoryList = newsByCategoryData.value;
   const newCategories = categories.slice(1);
 

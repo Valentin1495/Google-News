@@ -1,21 +1,24 @@
-type News = {
-  name: string;
+interface Image {
   url: string;
-  description: string;
-  provider: [
-    {
-      _type: string;
-      name: string;
-    }
-  ];
+  height: number;
+  width: number;
+  caption: string;
+}
 
-  datePublished: string;
-};
+interface News {
+  section: string;
+  title: string;
+  url: string;
+  byline: string;
+  published_date: string;
+  multimedia: Image[];
+}
 
-type NewsData = {
-  totalEstimatedMatches?: number;
-  value: News[];
-};
+interface NewsData {
+  section: string;
+  num_results: number;
+  results: News[];
+}
 
 type SearchParams = {
   q: string;

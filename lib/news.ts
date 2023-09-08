@@ -1,6 +1,6 @@
 export async function getHeadlineNews(): Promise<NewsData> {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_BING_API_URL}/news?mkt=en-US&count=24`,
+    `${process.env.NEXT_PUBLIC_BING_API_URL}/news?mkt=en-US`,
     {
       headers: {
         'Ocp-Apim-Subscription-Key': process.env
@@ -16,12 +16,9 @@ export async function getHeadlineNews(): Promise<NewsData> {
   return res.json();
 }
 
-export async function getNewsByCategory(
-  category: string,
-  offset: number
-): Promise<NewsData> {
+export async function getNewsByCategory(category: string): Promise<NewsData> {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_BING_API_URL}/news?mkt=en-US&category=${category}&count=24&offset=${offset}`,
+    `${process.env.NEXT_PUBLIC_BING_API_URL}/news?mkt=en-US&category=${category}`,
     {
       headers: {
         'Ocp-Apim-Subscription-Key': process.env

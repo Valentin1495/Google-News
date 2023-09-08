@@ -1,40 +1,44 @@
 import { formatDistanceToNowStrict } from 'date-fns';
 import SaveToggleBtn from './save-toggle-btn';
-import { BoomBoxIcon } from './icons';
+import { PencilLineIcon } from './icons';
 import { getServerSession } from 'next-auth';
 import StarBtn from './star-btn';
 import { authOptions } from '@/app/api/auth/[...nextauth]/authOptions';
-
-interface NewsWithClassName extends News {
-  className: string;
-}
+import Image from 'next/image';
 
 export default async function ServerNewsArticle({
-  name,
+  byline,
+  multimedia,
+  published_date,
+  title,
   url,
-  provider,
-  datePublished,
-  className,
-}: NewsWithClassName) {
-  const { name: providerName } = provider[0];
-  const timeAgo = formatDistanceToNowStrict(new Date(datePublished), {
+}: News) {
+  const author = byline;
+  const timeAgo = formatDistanceToNowStrict(new Date(published_date), {
     addSuffix: true,
   });
   const session = await getServerSession(authOptions);
-
-  const newsId = name;
+  const newsId = title;
+  const { url: imgSrc, caption, width, height } = multimedia[1];
 
   return (
-    <div className={className}>
+    <div>
+      <Image
+        src={imgSrc}
+        alt={caption}
+        width={width / 2}
+        height={height / 2}
+        className='rounded-md'
+      />
       <div className='flex items-center my-2 justify-between'>
         <div className='flex items-center gap-x-2'>
-          <BoomBoxIcon className='w-5 h-5' />
-          <section className='text-sm w-52 truncate'>{providerName}</section>
+          <PencilLineIcon className='w-5 h-5' />
+          <section className='text-sm w-36 truncate'>{author}</section>
         </div>
         {session ? (
           <SaveToggleBtn
-            providerName={providerName}
-            name={name}
+            author={author}
+            title={title}
             url={url}
             timeAgo={timeAgo}
             newsId={newsId}
@@ -49,7 +53,7 @@ export default async function ServerNewsArticle({
         target='_blank'
         className='article-title text-lg hover:underline hover:underline-offset-4'
       >
-        {name}
+        {title}
       </a>
 
       <h6 className='text-xs font-bold text-neutral-400'>{timeAgo}</h6>

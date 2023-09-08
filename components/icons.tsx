@@ -135,7 +135,7 @@ export const LogOutIcon = ({ className }: { className: string }) => (
   </svg>
 );
 
-export const BoomBoxIcon = ({ className }: { className: string }) => (
+export const PencilLineIcon = ({ className }: { className: string }) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     width='24'
@@ -148,13 +148,9 @@ export const BoomBoxIcon = ({ className }: { className: string }) => (
     strokeLinejoin='round'
     className={className}
   >
-    <path d='M4 9V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4' />
-    <path d='M8 8v1' />
-    <path d='M12 8v1' />
-    <path d='M16 8v1' />
-    <rect width='20' height='12' x='2' y='9' rx='2' />
-    <circle cx='8' cy='15' r='2' />
-    <circle cx='16' cy='15' r='2' />
+    <path d='M12 20h9' />
+    <path d='M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z' />
+    <path d='m15 5 3 3' />
   </svg>
 );
 

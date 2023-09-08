@@ -15,16 +15,16 @@ import { useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
 
 export type SaveToggleBtnProps = {
-  providerName: string;
-  name: string;
+  author: string;
+  title: string;
   url: string;
   timeAgo: string;
   newsId: string;
 };
 
 export default function SaveToggleBtn({
-  providerName,
-  name,
+  author,
+  title,
   url,
   timeAgo,
   newsId,
@@ -47,8 +47,8 @@ export default function SaveToggleBtn({
     try {
       await setDoc(doc(db, 'users', email, 'saved stories', newsId), {
         createdAt: serverTimestamp(),
-        providerName,
-        name,
+        author,
+        title,
         url,
         timeAgo,
         newsId,
