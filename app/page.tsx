@@ -4,8 +4,8 @@ import ServerNewsArticle from '@/components/server-news-article';
 
 export default async function Home() {
   const res = await fetch('http://localhost:3000/api/topStories');
-  const homeNewsData: NewsData = await res.json();
-  const homeNewsList = homeNewsData.results;
+  const newsData: NewsData = await res.json();
+  const newsList = newsData.results;
 
   return (
     <main>
@@ -19,7 +19,7 @@ export default async function Home() {
 
           <div className='bg-white p-5 rounded-md shadow-md'>
             <section className='grid sm:grid-cols-2 lg:grid-cols-3 gap-5'>
-              {homeNewsList.map((news) => (
+              {newsList.map((news) => (
                 <ServerNewsArticle key={news.url} {...news} />
               ))}
             </section>

@@ -3,13 +3,13 @@ import NavLink from './nav-link';
 
 export const categories: string[] = [
   'home',
-  'world',
-  'business',
-  'entertainment',
-  'politics',
-  'technology',
-  'science',
+  'fashion',
+  'food',
+  'health',
   'sports',
+  'technology',
+  'arts',
+  'movies',
 ];
 
 export default function Navbar() {

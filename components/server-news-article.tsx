@@ -19,15 +19,19 @@ export default async function ServerNewsArticle({
   });
   const session = await getServerSession(authOptions);
   const newsId = title;
-  const { url: imgSrc, caption, width, height } = multimedia[1];
+
+  if (!multimedia) return null;
+
+  const { url: imgSrc, caption } = multimedia[1];
 
   return (
     <div>
       <Image
         src={imgSrc}
         alt={caption}
-        width={width / 2}
-        height={height / 2}
+        width={300}
+        height={200}
+        priority
         className='rounded-md'
       />
       <div className='flex items-center my-2 justify-between'>
