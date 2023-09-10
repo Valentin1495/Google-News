@@ -26,14 +26,15 @@ export default async function NewsArticle({
 
   return (
     <div>
-      <Image
-        src={imgSrc}
-        alt={caption}
-        width={300}
-        height={200}
-        priority
-        className='rounded-md'
-      />
+      <section className='relative w-full aspect-[3/2] rounded-md overflow-hidden'>
+        <Image
+          src={imgSrc}
+          alt={caption}
+          fill
+          priority
+          // sizes=''
+        />
+      </section>
       <div className='flex items-center my-2 justify-between'>
         <div className='flex items-center gap-x-2'>
           <PencilLineIcon className='w-5 h-5' />
