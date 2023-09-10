@@ -13,7 +13,12 @@ export default function SearchResults({ query }: { query: string }) {
     queryKey: ['search', query],
     queryFn: async ({ pageParam = 0 }) => {
       const res = await fetch(
-        `http://localhost:3000/api/search?query=${query}&page=${pageParam}`
+        `https://news.noahhan.vercel.app/api/search?query=${query}&page=${pageParam}`,
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }
       );
       const data = await res.json();
       return data;

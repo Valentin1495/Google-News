@@ -4,7 +4,11 @@ import NewsArticle from '@/components/news-article';
 
 export const revalidate = 0;
 export default async function Home() {
-  const res = await fetch('http://localhost:3000/api/topStories');
+  const res = await fetch('https://news.noahhan.vercel.app/api/topStories', {
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
   const newsData: NewsData = await res.json();
   const newsList = newsData.results;
 

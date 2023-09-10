@@ -25,7 +25,7 @@ export default async function NewsByCategory({
   const pageParams = searchParams.page;
   const modified = category[0].toUpperCase() + category.slice(1);
 
-  const res = await fetch(`http://localhost:3000/api/${category}`, {
+  const res = await fetch(`https://news.noahhan.vercel.app/api/${category}`, {
     headers: {
       'Content-Type': 'application/json',
     },

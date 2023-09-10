@@ -28,7 +28,7 @@ export default function HandleOutsideClick({
     return () => {
       document.removeEventListener('click', handleOutsideClick);
     };
-  }, []);
+  }, [btnRef, dropdownRef, setShowDropdown]);
 
   return null;
 }
