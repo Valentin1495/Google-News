@@ -20,7 +20,7 @@ export default async function NewsArticle({
   const session = await getServerSession(authOptions);
   const newsId = title;
 
-  if (!multimedia) return null;
+  if (!multimedia || !title) return null;
 
   const { url: imgSrc, caption } = multimedia[1];
 

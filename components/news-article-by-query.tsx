@@ -19,10 +19,12 @@ export default function NewsArticleByQuery({
     addSuffix: true,
   });
   const { data: session } = useSession();
-  const newsId = _id;
+  const newsId = _id.slice('nyt://article/'.length);
+
+  if (!title) return null;
 
   return (
-    <div className='bg-white flex flex-col justify-between p-4 rounded-md shadow-sm'>
+    <div className='article-container'>
       <div className='flex items-center my-2 justify-between'>
         <div className='flex items-center gap-x-2'>
           <PencilLineIcon className='w-5 h-5' />
