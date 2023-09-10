@@ -5,7 +5,7 @@ import { collection, orderBy, query } from 'firebase/firestore';
 import { useSession } from 'next-auth/react';
 import { useCollection } from 'react-firebase-hooks/firestore';
 import SavedStory from './saved-story';
-import { NewspaperIcon } from './icons';
+import { FolderHeartIcon } from './icons';
 import { SaveToggleBtnProps } from './save-toggle-btn';
 import EmptySpace from './empty-space';
 import LoadingSkeleton from './loading-skeleton';
@@ -26,7 +26,7 @@ export default function SavedStories() {
   return (
     <div className='py-10 space-y-5'>
       <div className='flex items-center gap-x-2 '>
-        <NewspaperIcon className='w-8 h-8' />
+        <FolderHeartIcon className='w-8 h-8' />
         <h1 className='text-3xl font-medium'>Saved stories</h1>
       </div>
       {stories?.empty ? (
