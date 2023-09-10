@@ -1,26 +1,34 @@
 'use client';
 
-import { FileSearchIcon } from '@/components/icons';
-import Loader from '@/components/loader';
-import ClientNewsArticle from '@/components/client-news-article';
-import { useInfiniteQuery } from '@tanstack/react-query';
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
-import { getNewsResults } from '@/lib/news';
+import { useInfiniteQuery } from '@tanstack/react-query';
 import LoadingSkeleton from './loading-skeleton';
+import { FileSearchIcon } from '@/components/icons';
+import Loader from '@/components/loader';
+import NewsArticleByQuery from '@/components/news-article-by-query';
 
 export default function SearchResults({ query }: { query: string }) {
   const { status, data, fetchNextPage, isFetchingNextPage } = useInfiniteQuery({
-    queryKey: ['news', 'search', query],
-    queryFn: ({ pageParam = 0 }) => getNewsResults(query, pageParam),
-    getNextPageParam: (lastPage, allPages) => {
-      // For each subsequent page, increment offset by 20
-      const nextPageIndex = allPages.length * 20;
+    queryKey: ['search', query],
+    queryFn: async ({ pageParam = 0 }) => {
+      const res = await fetch(
+        `http://localhost:3000/api/search?query=${query}&page=${pageParam}`
+      );
+      const data = await res.json();
+      return data;
+    },
+    getNextPageParam: (lastPage) => {
+      const meta = lastPage.response?.meta;
+      const nextPageIndex = meta?.offset / 10 + 1;
+      const pages = Math.ceil(meta?.hits / 10);
 
-      // We want to get the next page as long as there's data in the last page
-      return lastPage.value.length >= 24 ? nextPageIndex : undefined;
+      return nextPageIndex < pages && nextPageIndex <= 100
+        ? nextPageIndex
+        : undefined;
     },
   });
+  const totalNumber = data?.pages[0].response?.meta.hits;
 
   const { ref, inView } = useInView();
 
@@ -35,20 +43,17 @@ export default function SearchResults({ query }: { query: string }) {
       {status === 'loading' ? (
         <LoadingSkeleton />
       ) : status === 'error' ? (
-        <h1 className='text-red-500 font-medium text-xl text-center'>Error</h1>
+        <h1 className='text-red-500 font-bold text-xl text-center'>Error</h1>
       ) : (
         <div className='space-y-5'>
           <div className='flex items-center gap-x-2'>
             <FileSearchIcon className='w-[26px] h-[26px]' />
             <h4 className='text-neutral-500 w-[280px] truncate sm:w-auto'>
-              {new Intl.NumberFormat().format(
-                data.pages[0].totalEstimatedMatches
-              )}{' '}
-              results
+              {new Intl.NumberFormat().format(totalNumber)} results
             </h4>
           </div>
 
-          {data.pages[0].totalEstimatedMatches ? (
+          {totalNumber ? (
             <>
               <div className='space-y-3'>
                 {data.pages.map((news, i) => (
@@ -56,12 +61,8 @@ export default function SearchResults({ query }: { query: string }) {
                     key={i}
                     className='grid sm:grid-cols-2 lg:grid-cols-3 gap-3'
                   >
-                    {news.value.map((article: News) => (
-                      <ClientNewsArticle
-                        key={article.url}
-                        {...article}
-                        className='article-by-query'
-                      />
+                    {news.response?.docs.map((article: NewsByQuery) => (
+                      <NewsArticleByQuery key={article._id} {...article} />
                     ))}
                   </div>
                 ))}

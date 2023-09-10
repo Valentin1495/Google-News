@@ -14,10 +14,10 @@ export default function SearchBar() {
     e.preventDefault();
     const modifiedQuery = searchQuery.trim().replace(/\s+/g, ' ');
 
-    router.push('/search?q=' + modifiedQuery);
+    router.push('/search?query=' + modifiedQuery);
   };
 
-  const query = searchParams.get('q');
+  const query = searchParams.get('query');
 
   useEffect(() => {
     if (query) {

@@ -6,7 +6,7 @@ import StarBtn from './star-btn';
 import { authOptions } from '@/app/api/auth/[...nextauth]/authOptions';
 import Image from 'next/image';
 
-export default async function ServerNewsArticle({
+export default async function NewsArticle({
   byline,
   multimedia,
   published_date,

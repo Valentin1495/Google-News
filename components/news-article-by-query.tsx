@@ -2,41 +2,37 @@
 
 import { formatDistanceToNowStrict } from 'date-fns';
 import SaveToggleBtn from './save-toggle-btn';
-import { BoomBoxIcon } from './icons';
+import { PencilLineIcon } from './icons';
 import StarBtn from './star-btn';
 import { useSession } from 'next-auth/react';
 
-interface NewsWithClassName extends News {
-  className: string;
-}
-
-export default function ClientNewsArticle({
-  name,
-  url,
-  provider,
-  datePublished,
-  className,
-}: NewsWithClassName) {
-  const { name: providerName } = provider[0];
-  const timeAgo = formatDistanceToNowStrict(new Date(datePublished), {
+export default function NewsArticleByQuery({
+  byline,
+  pub_date,
+  headline,
+  web_url,
+  _id,
+}: NewsByQuery) {
+  const author = byline.original ?? 'By anonymous';
+  const title = headline.main;
+  const timeAgo = formatDistanceToNowStrict(new Date(pub_date), {
     addSuffix: true,
   });
   const { data: session } = useSession();
-
-  const newsId = name;
+  const newsId = _id;
 
   return (
-    <div className={className}>
+    <div className='bg-white flex flex-col justify-between p-4 rounded-md shadow-sm'>
       <div className='flex items-center my-2 justify-between'>
         <div className='flex items-center gap-x-2'>
-          <BoomBoxIcon className='w-5 h-5' />
-          <section className='text-sm w-40 truncate'>{providerName}</section>
+          <PencilLineIcon className='w-5 h-5' />
+          <section className='text-sm w-36 truncate'>{author}</section>
         </div>
         {session ? (
           <SaveToggleBtn
-            providerName={providerName}
-            name={name}
-            url={url}
+            author={author}
+            title={title}
+            url={web_url}
             timeAgo={timeAgo}
             newsId={newsId}
           />
@@ -46,11 +42,11 @@ export default function ClientNewsArticle({
       </div>
 
       <a
-        href={url}
+        href={web_url}
         target='_blank'
         className='article-title text-lg hover:underline hover:underline-offset-4'
       >
-        {name}
+        {title}
       </a>
 
       <h6 className='text-xs font-bold text-neutral-400'>{timeAgo}</h6>

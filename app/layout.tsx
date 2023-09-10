@@ -20,8 +20,8 @@ export default async function RootLayout({
   const session = await getServerSession(authOptions);
 
   return (
-    <html lang='en' className='bg-sky-50'>
-      <body>
+    <html lang='en'>
+      <body className='bg-sky-50'>
         <Toast />
         <SessionProvider session={session}>
           <QueryClientProvider>{children}</QueryClientProvider>

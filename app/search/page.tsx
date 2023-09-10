@@ -5,19 +5,19 @@ export function generateMetadata({
 }: {
   searchParams: SearchParams;
 }) {
-  const query = searchParams.q;
+  const query = searchParams.query;
 
   return {
     title: query + ' - ' + 'Google News Search',
   };
 }
-
+export const revalidate = 0;
 export default function SearchNews({
   searchParams,
 }: {
   searchParams: SearchParams;
 }) {
-  const query = searchParams.q;
+  const query = searchParams.query;
 
   return (
     <main className='py-10'>

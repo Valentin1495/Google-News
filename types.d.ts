@@ -20,12 +20,21 @@ interface NewsData {
   results: News[];
 }
 
-type SearchParams = {
-  q: string;
-};
+interface NewsByQuery {
+  _id: string;
+  web_url: string;
+  multimedia: Image[];
+  headline: {
+    main: string;
+  };
+  pub_date: string;
+  byline: {
+    original: string;
+  };
+}
 
-type PageParams = {
-  page: number;
+type SearchParams = {
+  query: string;
 };
 
 type UserInfo = {

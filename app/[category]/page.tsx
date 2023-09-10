@@ -1,6 +1,6 @@
 import { NewspaperIcon } from '@/components/icons';
 import { categories } from '@/components/navbar';
-import ServerNewsArticle from '@/components/server-news-article';
+import NewsArticle from '@/components/news-article';
 import { notFound } from 'next/navigation';
 
 type NewsProps = {
@@ -49,7 +49,7 @@ export default async function NewsByCategory({
       <div className='bg-white p-5 rounded-md shadow-md'>
         <section className='grid sm:grid-cols-2 lg:grid-cols-3 gap-5'>
           {newsList?.map((news) => (
-            <ServerNewsArticle key={news.url} {...news} />
+            <NewsArticle key={news.url} {...news} />
           ))}
         </section>
       </div>

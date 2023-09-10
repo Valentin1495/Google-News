@@ -5,7 +5,7 @@ export function generateMetadata() {
     title: 'Google News - My Saved Stories',
   };
 }
-
+export const revalidate = 3600;
 export default function MySavedStories() {
   return (
     <div>
