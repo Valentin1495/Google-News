@@ -36,7 +36,7 @@ TypeScript, Next.js, [New York Times API](https://developer.nytimes.com/)를 사
 
 - Saved stories page
 
-![image](https://github.com/Valentin1495/Google-News/assets/69514169/9a76232b-3dbc-4fb4-bd63-ee45fd5a0fc6)
+![image](https://github.com/Valentin1495/Google-News/assets/69514169/6c2cf322-b718-4223-a629-17e5002dc941)
 
 ## Technologies
 
