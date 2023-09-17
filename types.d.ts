@@ -1,5 +1,6 @@
 interface Image {
   url: string;
+  blurredDataUrl: string;
   height: number;
   width: number;
   caption: string;

@@ -23,7 +23,7 @@ export default async function NewsArticle({
 
   if (!multimedia || !title) return null;
 
-  const { url: imgSrc, caption } = multimedia[1];
+  const { url: imgSrc, caption, blurredDataUrl } = multimedia[1];
 
   return (
     <div>
@@ -35,6 +35,8 @@ export default async function NewsArticle({
           priority
           sizes='(min-width: 1280px) 357px, (min-width: 1040px) 272px, (min-width: 780px) 306px, (min-width: 640px) 226px, (min-width: 380px) 280px, calc(33.33vw + 160px)'
           className='object-cover'
+          placeholder='blur'
+          blurDataURL={blurredDataUrl}
         />
       </section>
       <div className='flex items-center my-2 justify-between'>

@@ -1,6 +1,7 @@
 import Header from '@/components/header';
 import { NewspaperIcon } from '@/components/icons';
 import NewsArticle from '@/components/news-article';
+import addBlurredDataUrls from '@/lib/get-base64';
 // https://news.noahhan.vercel.app
 export const revalidate = 0;
 export default async function Home() {
@@ -11,6 +12,7 @@ export default async function Home() {
   });
   const newsData: NewsData = await res.json();
   const newsList = newsData.results;
+  const modifiedNewsList = await addBlurredDataUrls(newsList);
 
   return (
     <main>
@@ -24,7 +26,7 @@ export default async function Home() {
 
           <div className='bg-white p-5 rounded-md shadow-md'>
             <section className='grid sm:grid-cols-2 lg:grid-cols-3 gap-5'>
-              {newsList.map((news) => (
+              {modifiedNewsList.map((news) => (
                 <NewsArticle key={news.url} {...news} />
               ))}
             </section>
