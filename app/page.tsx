@@ -3,7 +3,7 @@ import { NewspaperIcon } from '@/components/icons';
 import NewsArticle from '@/components/news-article';
 import addBlurredDataUrls from '@/lib/get-base64';
 // https://news.noahhan.vercel.app
-export const revalidate = 0;
+export const revalidate = 60;
 export default async function Home() {
   const res = await fetch('http://localhost:3000/api/topStories', {
     headers: {
