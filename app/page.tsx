@@ -26,8 +26,8 @@ export default async function Home() {
 
           <div className='bg-white p-5 rounded-md shadow-md'>
             <section className='grid sm:grid-cols-2 lg:grid-cols-3 gap-5'>
-              {modifiedNewsList.map((news) => (
-                <NewsArticle key={news.url} {...news} />
+              {modifiedNewsList.map((news, i) => (
+                <NewsArticle key={news.url} {...news} idx={i} />
               ))}
             </section>
           </div>
