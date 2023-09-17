@@ -13,7 +13,8 @@ export default async function NewsArticle({
   title,
   url,
 }: News) {
-  const author = byline;
+  const author = byline ? byline.substring(3) : 'Anonymous';
+
   const timeAgo = formatDistanceToNowStrict(new Date(published_date), {
     addSuffix: true,
   });
@@ -32,7 +33,8 @@ export default async function NewsArticle({
           alt={caption}
           fill
           priority
-          // sizes=''
+          sizes='(min-width: 1280px) 357px, (min-width: 1040px) 272px, (min-width: 780px) 306px, (min-width: 640px) 226px, (min-width: 380px) 280px, calc(33.33vw + 160px)'
+          className='object-cover'
         />
       </section>
       <div className='flex items-center my-2 justify-between'>

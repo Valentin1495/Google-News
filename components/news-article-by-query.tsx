@@ -13,7 +13,7 @@ export default function NewsArticleByQuery({
   web_url,
   _id,
 }: NewsByQuery) {
-  const author = byline.original ?? 'By anonymous';
+  const author = byline.original.substring(3) ?? 'Anonymous';
   const title = headline.main;
   const timeAgo = formatDistanceToNowStrict(new Date(pub_date), {
     addSuffix: true,
