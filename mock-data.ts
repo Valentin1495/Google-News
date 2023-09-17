@@ -14,6 +14,7 @@ export const mockData: NewsData = {
       published_date: '2023-09-08T05:02:23-04:00',
       multimedia: [
         {
+          blurredDataUrl: '',
           url: 'https://static01.nyt.com/images/2023/09/08/multimedia/08thomas-yale-qthv/08thomas-yale-qthv-thumbLarge.jpg',
           height: 150,
           width: 150,

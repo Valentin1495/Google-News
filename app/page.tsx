@@ -2,10 +2,11 @@ import Header from '@/components/header';
 import { NewspaperIcon } from '@/components/icons';
 import NewsArticle from '@/components/news-article';
 import addBlurredDataUrls from '@/lib/get-base64';
-// https://news.noahhan.vercel.app
+
 export const revalidate = 60;
+
 export default async function Home() {
-  const res = await fetch('http://localhost:3000/api/topStories', {
+  const res = await fetch('https://news.noahhan.vercel.app/api/topStories', {
     headers: {
       'Content-Type': 'application/json',
     },
