@@ -7,20 +7,13 @@ import LoadingSkeleton from './loading-skeleton';
 import { FileSearchIcon } from '@/components/icons';
 import Loader from '@/components/loader';
 import NewsArticleByQuery from '@/components/news-article-by-query';
+import { fetchSearchResults } from '@/lib/fetch-search-results';
 
 export default function SearchResults({ query }: { query: string }) {
   const { status, data, fetchNextPage, isFetchingNextPage } = useInfiniteQuery({
     queryKey: ['search', query],
     queryFn: async ({ pageParam = 0 }) => {
-      const res = await fetch(
-        `https://news.noahhan.vercel.app/api/search?query=${query}&page=${pageParam}`,
-        {
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        }
-      );
-      const data = await res.json();
+      const data = await fetchSearchResults(query, pageParam);
       return data;
     },
     getNextPageParam: (lastPage) => {

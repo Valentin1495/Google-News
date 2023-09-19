@@ -5,8 +5,7 @@ import { fetchHomepage } from '@/lib/fetch-homepage';
 import addBlurredDataUrls from '@/lib/get-base64';
 
 export default async function Home() {
-  const res = await fetchHomepage();
-  const newsData: NewsData = await res.json();
+  const newsData: NewsData = await fetchHomepage();
   const newsList = newsData.results;
   const modifiedNewsList = await addBlurredDataUrls(newsList);
   const sortedNewsList = modifiedNewsList.sort((a, b) => {

@@ -22,8 +22,7 @@ export default async function NewsByCategory({ params }: NewsProps) {
   const category = params.category;
   const modified = category[0].toUpperCase() + category.slice(1);
 
-  const res = await fetchSection(category);
-  const newsData: NewsData = await res.json();
+  const newsData: NewsData = await fetchSection(category);
   const newsList = newsData.results;
   const modifiedNewsList = await addBlurredDataUrls(newsList);
   const sortedNewsList = modifiedNewsList.sort((a, b) => {
