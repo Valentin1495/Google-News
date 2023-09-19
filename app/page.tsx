@@ -1,19 +1,22 @@
 import Header from '@/components/header';
 import { NewspaperIcon } from '@/components/icons';
 import NewsArticle from '@/components/news-article';
+import { fetchHomepage } from '@/lib/fetch-homepage';
 import addBlurredDataUrls from '@/lib/get-base64';
 
-export const revalidate = 60;
-
 export default async function Home() {
-  const res = await fetch('https://news.noahhan.vercel.app/api/topStories', {
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  });
+  const res = await fetchHomepage();
   const newsData: NewsData = await res.json();
   const newsList = newsData.results;
   const modifiedNewsList = await addBlurredDataUrls(newsList);
+  const sortedNewsList = modifiedNewsList.sort((a, b) => {
+    const timestampA = new Date(a.published_date);
+    const timestampB = new Date(b.published_date);
+
+    if (timestampA < timestampB) return 1;
+    if (timestampA > timestampB) return -1;
+    return 0;
+  });
 
   return (
     <main>
@@ -27,7 +30,7 @@ export default async function Home() {
 
           <div className='bg-white p-5 rounded-md shadow-md'>
             <section className='grid sm:grid-cols-2 lg:grid-cols-3 gap-5'>
-              {modifiedNewsList.map((news, i) => (
+              {sortedNewsList.map((news, i) => (
                 <NewsArticle key={news.url} {...news} idx={i} />
               ))}
             </section>

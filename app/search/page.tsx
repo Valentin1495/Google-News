@@ -12,8 +12,6 @@ export function generateMetadata({
   };
 }
 
-export const revalidate = 60;
-
 export default function SearchNews({
   searchParams,
 }: {

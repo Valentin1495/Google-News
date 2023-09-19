@@ -1,11 +1,12 @@
 import { NewspaperIcon } from '@/components/icons';
 import { categories } from '@/components/navbar';
 import NewsArticle from '@/components/news-article';
+import { fetchSection } from '@/lib/fetch-section';
+import addBlurredDataUrls from '@/lib/get-base64';
 import { notFound } from 'next/navigation';
 
 type NewsProps = {
   params: { category: string };
-  searchParams: { page: number };
 };
 
 export function generateMetadata({ params }: NewsProps) {
@@ -17,27 +18,26 @@ export function generateMetadata({ params }: NewsProps) {
   };
 }
 
-export const revalidate = 60;
-
-export default async function NewsByCategory({
-  params,
-  searchParams,
-}: NewsProps) {
+export default async function NewsByCategory({ params }: NewsProps) {
   const category = params.category;
-  const pageParams = searchParams.page;
   const modified = category[0].toUpperCase() + category.slice(1);
 
-  const res = await fetch(`https://news.noahhan.vercel.app/api/${category}`, {
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  });
-
+  const res = await fetchSection(category);
   const newsData: NewsData = await res.json();
   const newsList = newsData.results;
+  const modifiedNewsList = await addBlurredDataUrls(newsList);
+  const sortedNewsList = modifiedNewsList.sort((a, b) => {
+    const timestampA = new Date(a.published_date);
+    const timestampB = new Date(b.published_date);
+
+    if (timestampA < timestampB) return 1;
+    if (timestampA > timestampB) return -1;
+    return 0;
+  });
+
   const newCategories = categories.slice(1);
 
-  if (!newCategories?.includes(category) || pageParams > 5) {
+  if (!newCategories?.includes(category)) {
     notFound();
   }
 
@@ -50,7 +50,7 @@ export default async function NewsByCategory({
 
       <div className='bg-white p-5 rounded-md shadow-md'>
         <section className='grid sm:grid-cols-2 lg:grid-cols-3 gap-5'>
-          {newsList?.map((news, i) => (
+          {sortedNewsList?.map((news, i) => (
             <NewsArticle key={news.url} {...news} idx={i} />
           ))}
         </section>

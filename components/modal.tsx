@@ -9,6 +9,9 @@ type ModalProps = {
 };
 
 export default function Modal({ showModal, closeModal }: ModalProps) {
+  const imgSrc =
+    'https://lh3.googleusercontent.com/vaKCMRGl23zbcBqZQvt0_g3U6yRy6Da_ADX72E1AXQ01TFfqr9m72deNGXk_l5Iyk5g9wFB_3Q=rw';
+
   return (
     <div
       className={`transition-opacity ${
@@ -17,12 +20,10 @@ export default function Modal({ showModal, closeModal }: ModalProps) {
     >
       <div className='modal-contents'>
         <Image
-          src={
-            'https://lh3.googleusercontent.com/vaKCMRGl23zbcBqZQvt0_g3U6yRy6Da_ADX72E1AXQ01TFfqr9m72deNGXk_l5Iyk5g9wFB_3Q=rw'
-          }
+          src={imgSrc}
           alt='Modal pic'
-          width={300}
-          height={300}
+          width={512}
+          height={276}
           className='mx-auto'
         />
         <div className='px-3 py-2 space-y-5'>
