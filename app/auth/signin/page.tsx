@@ -11,7 +11,13 @@ export default async function Signin() {
 
   return (
     <div className='flex justify-center min-h-screen items-center flex-col'>
-      <Image src={'/icon.png'} alt='Google news logo' width={70} height={70} />
+      <Image
+        src={'/icon.png'}
+        alt='Google news logo'
+        width={192}
+        height={192}
+        className='w-20 h-20'
+      />
       <SigninBtn />
     </div>
   );
