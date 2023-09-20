@@ -3,7 +3,7 @@ export async function fetchHomepage() {
     `${process.env.NEXT_PUBLIC_API_URL}/topstories/v2/home.json?api-key=${process.env.NEXT_PUBLIC_API_KEY}`,
     {
       next: {
-        revalidate: 60,
+        revalidate: 3600,
       },
     }
   );

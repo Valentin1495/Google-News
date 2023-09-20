@@ -3,7 +3,7 @@ export async function fetchSearchResults(query: string, pageParam: number) {
     `${process.env.NEXT_PUBLIC_API_URL}/search/v2/articlesearch.json?api-key=${process.env.NEXT_PUBLIC_API_KEY}&q=${query}&sort=newest&page=${pageParam}`,
     {
       next: {
-        revalidate: 60,
+        revalidate: 3600,
       },
     }
   );
