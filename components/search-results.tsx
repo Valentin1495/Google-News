@@ -41,13 +41,16 @@ export default function SearchResults({ query }: { query: string }) {
       {status === 'loading' ? (
         <LoadingSkeleton />
       ) : status === 'error' ? (
-        <h1 className='text-red-500 font-bold text-xl text-center'>Error</h1>
+        <h1 className='text-red-500 font-bold text-xl text-center'>
+          Failed to fetch search results 😭
+        </h1>
       ) : (
         <div className='space-y-5'>
           <div className='flex items-center gap-x-2'>
             <FileSearchIcon className='w-[26px] h-[26px]' />
             <h4 className='text-neutral-500 w-[280px] truncate sm:w-auto'>
-              {new Intl.NumberFormat().format(totalNumber)} results
+              {totalNumber ? new Intl.NumberFormat().format(totalNumber) : 0}{' '}
+              results
             </h4>
           </div>
 

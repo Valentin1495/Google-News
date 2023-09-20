@@ -24,7 +24,7 @@ TypeScript, Next.js, [New York Times API](https://developer.nytimes.com/)를 사
 
 - News feed page
 
-![image](https://github.com/Valentin1495/Google-News/assets/69514169/715b17e1-76f7-454a-8ee4-762a6a2e491f)
+![image](https://github.com/Valentin1495/Google-News/assets/69514169/e7db1023-efa5-4a8b-bf51-acc8f0fcf281)
 
 - Search results page
 
