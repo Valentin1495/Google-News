@@ -6,7 +6,7 @@ export const categories: string[] = [
   'fashion',
   'food',
   'health',
-  'sports',
+  'travel',
   'technology',
   'arts',
   'movies',
