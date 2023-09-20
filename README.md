@@ -32,11 +32,11 @@ TypeScript, Next.js, [New York Times API](https://developer.nytimes.com/)를 사
 
 - OAuth page
 
-![image](https://github.com/Valentin1495/Google-News/assets/69514169/acb18658-f2df-4683-9b9f-a58feb6426dd)
+![image](https://github.com/Valentin1495/Google-News/assets/69514169/6d451627-b4a4-483f-85b0-6dbcf2eb2f97)
 
 - Saved stories page
 
-![image](https://github.com/Valentin1495/Google-News/assets/69514169/6c2cf322-b718-4223-a629-17e5002dc941)
+![image](https://github.com/Valentin1495/Google-News/assets/69514169/d2e16f06-dbea-46f7-ac1f-a9e0a6c4ae1b)
 
 ## Technologies
 
