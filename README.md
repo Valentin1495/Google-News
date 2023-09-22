@@ -1,6 +1,6 @@
 # Google News
 
-Next.js와 [New York Times API](https://developer.nytimes.com)를 사용하여 개발한 뉴스 앱으로, NYT의 최신 뉴스를 제공합니다.
+**Next.js**와 [New York Times API](https://developer.nytimes.com)를 사용하여 개발한 뉴스 앱으로, NYT의 최신 뉴스를 제공합니다.
 
 ## Table of Contents
 
@@ -11,19 +11,18 @@ Next.js와 [New York Times API](https://developer.nytimes.com)를 사용하여 �
 ## Features
 
 - NYT의 최신 뉴스 기사 검색 및 읽기
-- 특정 주제나 뉴스 기사 검색
-- 즐겨찾기 기능으로 관심 있는 기사 저장
+- 즐겨찾기 기능 (관심 있는 기사 저장)
 - 모든 디바이스에서 원활한 사용을 위한 반응형 디자인
 
 ## Screenshots
 
 - _News feed page_
-  - **New York Times API**를 이용하여 섹션 별 뉴스를 제공. **Next.js** 기본 옵션인 **React Server Component**를 활용하여 **Server Rendering**
+  - **New York Times API**를 이용하여 섹션 별 뉴스 제공. **Next.js** 기본 옵션인 **React Server Component**를 활용하여 **Server Rendering**.
 
 ![image](https://github.com/Valentin1495/Google-News/assets/69514169/e7db1023-efa5-4a8b-bf51-acc8f0fcf281)
 
 - _Search results page_
-  - 뉴스 기사 검색. 이는 무한 스크롤 UI로 만들기 위해 **React Query**와 **Client Component**를 활용해 **Client Rendering**
+  - 뉴스 기사 검색. 이는 무한 스크롤 UI로 만들기 위해 **React Query**와 **Client Component**를 활용해 **Client Rendering**.
 
 ![image](https://github.com/Valentin1495/Google-News/assets/69514169/6b271d5e-f2d0-4e52-b298-7e348e187b34)
 
