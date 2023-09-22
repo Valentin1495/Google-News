@@ -1,7 +1,6 @@
 # Google News
 
-A news app built with TypeScript, Next.js, and [New York Times API](https://developer.nytimes.com/), providing you with the latest news and updates from NYT.  
-TypeScript, Next.js, [New York Times API](https://developer.nytimes.com/)를 사용하여 개발한 뉴스 앱으로, NYT의 최신 뉴스 및 업데이트를 제공합니다.
+Next.js와 [New York Times API](https://developer.nytimes.com)를 사용하여 개발한 뉴스 앱으로, NYT의 최신 뉴스를 제공합니다.
 
 ## Table of Contents
 
@@ -11,32 +10,36 @@ TypeScript, Next.js, [New York Times API](https://developer.nytimes.com/)를 사
 
 ## Features
 
-- Browse and read the latest news articles from NYT.  
-  NYT의 최신 뉴스 기사 검색 및 읽기
-- Search for specific topics or news articles.  
-  특정 주제나 뉴스 기사 검색
-- Save favorite articles for later reference.  
-  즐겨찾기 기능으로 관심 있는 기사 저장
-- Responsive design for a seamless experience on all devices.  
-  모든 디바이스에서 원활한 사용을 위한 반응형 디자인
+- NYT의 최신 뉴스 기사 검색 및 읽기
+- 특정 주제나 뉴스 기사 검색
+- 즐겨찾기 기능으로 관심 있는 기사 저장
+- 모든 디바이스에서 원활한 사용을 위한 반응형 디자인
 
 ## Screenshots
 
-- News feed page
+- _News feed page_
+  - **New York Times API**를 이용하여 섹션 별 뉴스를 제공. **Next.js** 기본 옵션인 **React Server Component**를 활용하여 **Server Rendering**
 
 ![image](https://github.com/Valentin1495/Google-News/assets/69514169/e7db1023-efa5-4a8b-bf51-acc8f0fcf281)
 
-- Search results page
+- _Search results page_
+  - 뉴스 기사 검색. 이는 무한 스크롤 UI로 만들기 위해 **React Query**와 **Client Component**를 활용해 **Client Rendering**
 
 ![image](https://github.com/Valentin1495/Google-News/assets/69514169/6b271d5e-f2d0-4e52-b298-7e348e187b34)
 
-- OAuth page
+- _OAuth page_
+
+  - **NextAuth.js**를 활용한 Google 로그인
 
 ![image](https://github.com/Valentin1495/Google-News/assets/69514169/6d451627-b4a4-483f-85b0-6dbcf2eb2f97)
 
-- Saved stories page
+- _Saved stories page_
+
+  - **Firebase Firestore**에 원하는 기사 저장
 
 ![image](https://github.com/Valentin1495/Google-News/assets/69514169/d2e16f06-dbea-46f7-ac1f-a9e0a6c4ae1b)
+
+- 실시간으로 업데이트되는 뉴스의 특성을 고려하여 데이터 **Revalidation**을 1시간 간격으로 설정
 
 ## Technologies
 
