@@ -17,11 +17,13 @@
 ## Screenshots
 
 - _News feed page_
+
   - **New York Times API**를 이용하여 섹션 별 뉴스 제공. **Next.js** 기본 옵션인 **React Server Component**를 활용하여 **Server Rendering**.
 
 ![image](https://github.com/Valentin1495/Google-News/assets/69514169/e7db1023-efa5-4a8b-bf51-acc8f0fcf281)
 
 - _Search results page_
+
   - 뉴스 기사 검색. 무한 스크롤 UI로 만들기 위해 **React Query**와 **Client Component**를 활용해 **Client Rendering**.
 
 ![image](https://github.com/Valentin1495/Google-News/assets/69514169/62222ce6-15b7-4464-ac92-2e5806cf988b)
