@@ -10,7 +10,7 @@
 
 ## Features
 
-- NYT의 최신 뉴스 기사 검색 및 읽기
+- NYT의 최신 뉴스 기사 읽기 및 검색
 - 즐겨찾기 기능 (관심 있는 기사 저장)
 - 모든 디바이스에서 원활한 사용을 위한 반응형 디자인
 
@@ -22,9 +22,9 @@
 ![image](https://github.com/Valentin1495/Google-News/assets/69514169/e7db1023-efa5-4a8b-bf51-acc8f0fcf281)
 
 - _Search results page_
-  - 뉴스 기사 검색. 이는 무한 스크롤 UI로 만들기 위해 **React Query**와 **Client Component**를 활용해 **Client Rendering**.
+  - 뉴스 기사 검색. 무한 스크롤 UI로 만들기 위해 **React Query**와 **Client Component**를 활용해 **Client Rendering**.
 
-![image](https://github.com/Valentin1495/Google-News/assets/69514169/6b271d5e-f2d0-4e52-b298-7e348e187b34)
+![image](https://github.com/Valentin1495/Google-News/assets/69514169/62222ce6-15b7-4464-ac92-2e5806cf988b)
 
 - _OAuth page_
 
