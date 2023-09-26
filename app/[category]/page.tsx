@@ -65,6 +65,7 @@ export default async function NewsByCategory({
         <section className='text-center space-x-5'>
           {pageNumbers.map((pageNum) => (
             <Link
+              key={pageNum}
               href={`?page=${pageNum}`}
               className={`${pageNum === page && 'text-sky-400 font-bold'}`}
             >
