@@ -43,8 +43,8 @@ export default async function NewsByCategory({ params }: NewsProps) {
 
       <div className='bg-white p-5 rounded-md shadow-md'>
         <section className='grid sm:grid-cols-2 lg:grid-cols-3 gap-5'>
-          {sortedOne?.slice(0, 6).map((news, i) => (
-            <NewsArticle key={news.url} {...news} idx={i} />
+          {sortedOne?.slice(0, 6).map((news) => (
+            <NewsArticle key={news.url} {...news} />
           ))}
         </section>
       </div>

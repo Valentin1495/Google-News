@@ -6,20 +6,13 @@ import StarBtn from './star-btn';
 import { authOptions } from '@/app/api/auth/[...nextauth]/authOptions';
 import Image from 'next/image';
 
-type Idx = {
-  idx: number;
-};
-
-type NewsWithIdx = News & Idx;
-
 export default async function NewsArticle({
   byline,
   multimedia,
   published_date,
   title,
   url,
-  idx,
-}: NewsWithIdx) {
+}: News) {
   const author = byline ? byline.substring(3) : 'Anonymous';
 
   const timeAgo = formatDistanceToNowStrict(new Date(published_date), {
@@ -39,7 +32,7 @@ export default async function NewsArticle({
           src={imgSrc}
           alt={caption}
           fill
-          priority={idx <= 9}
+          priority
           sizes='(min-width: 1280px) 357px, (min-width: 1040px) 272px, (min-width: 780px) 306px, (min-width: 640px) 226px, (min-width: 380px) 280px, calc(33.33vw + 160px)'
           className='object-cover'
           placeholder='blur'
