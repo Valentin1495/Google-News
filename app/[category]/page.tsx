@@ -18,6 +18,12 @@ export function generateMetadata({ params }: NewsProps) {
   };
 }
 
+export async function generateStaticParams() {
+  return categories.map((category) => ({
+    category,
+  }));
+}
+
 export default async function NewsByCategory({ params }: NewsProps) {
   const category = params.category;
   const modified = category[0].toUpperCase() + category.slice(1);
