@@ -3,6 +3,7 @@ import { categories } from '@/components/navbar';
 import NewsArticle from '@/components/news-article';
 import { fetchSection } from '@/lib/fetch-section';
 import addBlurredDataUrls from '@/lib/get-base64';
+import { sortByNewest } from '@/lib/sort-by-newest';
 import { notFound } from 'next/navigation';
 
 type NewsProps = {
@@ -18,12 +19,6 @@ export function generateMetadata({ params }: NewsProps) {
   };
 }
 
-export async function generateStaticParams() {
-  return categories.map((category) => ({
-    category,
-  }));
-}
-
 export default async function NewsByCategory({ params }: NewsProps) {
   const category = params.category;
   const modified = category[0].toUpperCase() + category.slice(1);
@@ -31,14 +26,7 @@ export default async function NewsByCategory({ params }: NewsProps) {
   const newsData: NewsData = await fetchSection(category);
   const newsList = newsData.results;
   const modifiedNewsList = await addBlurredDataUrls(newsList);
-  const sortedNewsList = modifiedNewsList.sort((a, b) => {
-    const timestampA = new Date(a.published_date);
-    const timestampB = new Date(b.published_date);
-
-    if (timestampA < timestampB) return 1;
-    if (timestampA > timestampB) return -1;
-    return 0;
-  });
+  const sortedOne = sortByNewest(modifiedNewsList);
 
   const newCategories = categories.slice(1);
 
@@ -55,7 +43,7 @@ export default async function NewsByCategory({ params }: NewsProps) {
 
       <div className='bg-white p-5 rounded-md shadow-md'>
         <section className='grid sm:grid-cols-2 lg:grid-cols-3 gap-5'>
-          {sortedNewsList?.map((news, i) => (
+          {sortedOne?.slice(0, 6).map((news, i) => (
             <NewsArticle key={news.url} {...news} idx={i} />
           ))}
         </section>
