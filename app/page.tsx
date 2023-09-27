@@ -6,8 +6,7 @@ import addBlurredDataUrls from '@/lib/get-base64';
 import { sortByNewest } from '@/lib/sort-by-newest';
 
 export default async function Home() {
-  const newsData: NewsData = await fetchHomepage();
-  const newsList = newsData.results;
+  const newsList = await fetchHomepage();
   const modifiedNewsList = await addBlurredDataUrls(newsList);
   const sortedOne = sortByNewest(modifiedNewsList);
 
@@ -23,7 +22,7 @@ export default async function Home() {
 
           <div className='bg-white p-5 rounded-md shadow-md'>
             <section className='grid sm:grid-cols-2 lg:grid-cols-3 gap-5'>
-              {sortedOne.slice(0, 12).map((news) => (
+              {sortedOne.map((news) => (
                 <NewsArticle key={news.url} {...news} />
               ))}
             </section>

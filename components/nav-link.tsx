@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useParams } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import { Dispatch, SetStateAction } from 'react';
 
 type NavLinkType = {
@@ -10,12 +10,12 @@ type NavLinkType = {
 };
 
 export default function NavLink({ category, setShowDropdown }: NavLinkType) {
-  const params = useParams();
+  const pathname = usePathname();
 
-  const href = category === 'home' ? '/' : `/${category}?page=1`;
+  const href = category === 'home' ? '/' : `/${category}`;
   const modified = category[0].toUpperCase() + category.slice(1);
 
-  const active = params.category === category;
+  const active = pathname === href;
 
   return (
     <Link

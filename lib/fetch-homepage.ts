@@ -8,7 +8,7 @@ export async function fetchHomepage() {
     }
   );
 
-  const data = await res.json();
+  const data: NewsData = await res.json();
 
-  return data;
+  return data.results.slice(0, 12);
 }
