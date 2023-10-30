@@ -13,7 +13,7 @@ New York Times의 최신 뉴스를 읽고, 검색하고, 저장해 보세요.
 
 ## Features
 
-- 섹션 별 뉴스 제공 **New York Times API** / **Server-Side Rendering** with **React Server Component**
+- 섹션 별 뉴스 제공 with **New York Times API** / **Server-Side Rendering** with **React Server Component**
 
   - 실시간으로 업데이트되는 뉴스의 특성을 고려하여 데이터 **Revalidation**을 1시간 간격으로 설정
 
