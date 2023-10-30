@@ -8,7 +8,7 @@ export function generateMetadata({
   const query = searchParams.query;
 
   return {
-    title: query + ' - ' + 'Google News Search',
+    title: query + ' - ' + 'NYTimes Search',
   };
 }
 

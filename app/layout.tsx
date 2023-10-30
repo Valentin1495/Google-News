@@ -7,9 +7,9 @@ import { authOptions } from './api/auth/[...nextauth]/authOptions';
 import Toast from '@/components/toast';
 
 export const metadata: Metadata = {
-  title: 'Google News',
+  title: 'NYTimes',
   description:
-    'Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.',
+    'Comprehensive up-to-date news coverage, aggregated from sources all over the world by New York Times.',
 };
 
 export default async function RootLayout({
