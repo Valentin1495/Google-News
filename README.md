@@ -1,8 +1,8 @@
-# [NYTimes](htts://nytimes-nh.vercel.app)
+# [NYTimes](https://nytimes-nh.vercel.app)
 
 New York Times의 최신 뉴스를 읽고, 검색하고, 저장해 보세요.
 
-## Technologies
+## Tech Stack
 
 - **Framework:** [Next.js](https://nextjs.org)
 - **Styling:** [Tailwind CSS](https://tailwindcss.com)
